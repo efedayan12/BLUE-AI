@@ -1,0 +1,100 @@
+# BLUE_AI Varsayılan Kurallar
+# Her kural: name, condition, action, priority, cooldown
+
+[[rules]]
+name = "high_cpu_warning"
+condition = "cpu_percent > 80"
+action = "warn_high_cpu"
+priority = "normal"
+cooldown = "120s"
+
+[[rules]]
+name = "critical_cpu_throttle"
+condition = "cpu_percent > 95"
+action = "throttle_top_process"
+priority = "high"
+cooldown = "60s"
+
+[[rules]]
+name = "high_ram_warning"
+condition = "ram_percent > 85"
+action = "warn_high_ram"
+priority = "normal"
+cooldown = "120s"
+
+[[rules]]
+name = "critical_ram_cleanup"
+condition = "ram_percent > 95"
+action = "cleanup_ram"
+priority = "high"
+cooldown = "60s"
+
+[[rules]]
+name = "disk_space_warning"
+condition = "disk_percent > 85"
+action = "warn_disk_space"
+priority = "normal"
+cooldown = "3600s"
+
+[[rules]]
+name = "disk_space_critical"
+condition = "disk_percent > 95"
+action = "emergency_disk_cleanup"
+priority = "critical"
+cooldown = "1800s"
+
+[[rules]]
+name = "high_cpu_temp"
+condition = "cpu_temp > 75"
+action = "warn_cpu_temp"
+priority = "high"
+cooldown = "300s"
+
+[[rules]]
+name = "critical_cpu_temp"
+condition = "cpu_temp > 90"
+action = "emergency_throttle"
+priority = "critical"
+cooldown = "60s"
+
+[[rules]]
+name = "gpu_temp_warning"
+condition = "gpu_temp > 80"
+action = "warn_gpu_temp"
+priority = "high"
+cooldown = "300s"
+
+[[rules]]
+name = "process_cpu_hog"
+condition = "top_process_cpu > 50"
+action = "investigate_process"
+priority = "normal"
+cooldown = "180s"
+
+[[rules]]
+name = "process_ram_hog"
+condition = "top_process_ram_mb > 2048"
+action = "investigate_process_ram"
+priority = "normal"
+cooldown = "180s"
+
+[[rules]]
+name = "network_spike"
+condition = "network_mbps > 100"
+action = "investigate_network"
+priority = "normal"
+cooldown = "120s"
+
+[[rules]]
+name = "low_battery"
+condition = "battery_percent < 20"
+action = "switch_power_saver"
+priority = "high"
+cooldown = "300s"
+
+[[rules]]
+name = "critical_battery"
+condition = "battery_percent < 10"
+action = "emergency_power_save"
+priority = "critical"
+cooldown = "120s"

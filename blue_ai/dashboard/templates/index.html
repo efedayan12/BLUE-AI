@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUE_AI — Bilgisayar Yönetim Paneli</title>
+    <style>
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-secondary: #111827;
+            --bg-card: #1a1f35;
+            --bg-card-hover: #1e2545;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --accent-green: #10b981;
+            --accent-yellow: #f59e0b;
+            --accent-red: #ef4444;
+            --accent-purple: #8b5cf6;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-dim: #64748b;
+            --border: #1e293b;
+            --glass: rgba(255, 255, 255, 0.03);
+            --shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            --glow-blue: 0 0 20px rgba(59, 130, 246, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(59,130,246,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(6,182,212,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(139,92,246,0.05) 0%, transparent 50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .app { position: relative; z-index: 1; }
+
+        /* Header */
+        .header {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .header-logo .dot {
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            box-shadow: 0 0 10px var(--accent-blue);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; box-shadow: 0 0 10px var(--accent-blue); }
+            50% { opacity: 0.7; box-shadow: 0 0 20px var(--accent-blue); }
+        }
+
+        .header-logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 999px;
+            font-size: 0.8rem;
+            color: var(--accent-green);
+        }
+
+        .status-badge .dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .uptime-badge {
+            padding: 0.4rem 1rem;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 999px;
+            font-size: 0.8rem;
+            color: var(--accent-purple);
+        }
+
+        /* Profile buttons */
+        .profile-bar {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.75rem 2rem;
+            background: rgba(17, 24, 39, 0.5);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .profile-btn {
+            padding: 0.4rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+
+        .profile-btn:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-blue);
+            color: var(--text-primary);
+        }
+
+        .profile-btn.active {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Main grid */
+        .main { padding: 1.5rem 2rem; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .grid-full {
+            grid-column: 1 / -1;
+        }
+
+        /* Card */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            box-shadow: var(--shadow);
+        }
+
+        .card:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: var(--glow-blue);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+        }
+
+        .card-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .card-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-sub {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 999px;
+            transition: width 0.5s ease, background 0.3s;
+        }
+
+        .progress-fill.green { background: linear-gradient(90deg, #10b981, #34d399); }
+        .progress-fill.yellow { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+        .progress-fill.red { background: linear-gradient(90deg, #ef4444, #f87171); }
+
+        /* Core bars */
+        .core-bars {
+            display: flex;
+            gap: 4px;
+            margin-top: 1rem;
+            align-items: end;
+            height: 60px;
+        }
+
+        .core-bar {
+            flex: 1;
+            background: rgba(59, 130, 246, 0.3);
+            border-radius: 4px 4px 0 0;
+            transition: height 0.5s ease;
+            min-height: 4px;
+        }
+
+        /* Process table */
+        .process-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .process-table th {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .process-table td {
+            padding: 0.6rem 0.75rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .process-table tr:hover td {
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .process-name {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .process-kill {
+            background: none;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: var(--accent-red);
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all 0.2s;
+        }
+
+        .process-kill:hover {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: var(--accent-red);
+        }
+
+        /* Disk cards */
+        .disk-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+        .disk-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 10px;
+        }
+
+        .disk-icon {
+            font-size: 1.5rem;
+        }
+
+        .disk-info { flex: 1; }
+        .disk-name { font-weight: 600; font-size: 0.9rem; }
+        .disk-detail { font-size: 0.8rem; color: var(--text-dim); }
+
+        .disk-progress {
+            width: 120px;
+            height: 6px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .disk-percent {
+            font-size: 0.9rem;
+            font-weight: 700;
+            min-width: 45px;
+            text-align: right;
+        }
+
+        /* Network */
+        .net-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .net-stat {
+            padding: 1rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .net-stat-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-top: 0.25rem;
+        }
+
+        .net-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header { padding: 1rem; }
+            .main { padding: 1rem; }
+            .grid { grid-template-columns: 1fr; gap: 1rem; }
+            .card-value { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-logo">
+                <div class="dot"></div>
+                <h1>BLUE_AI</h1>
+            </div>
+            <div class="header-right">
+                <div class="uptime-badge" id="uptime">⏱ Yükleniyor...</div>
+                <div class="status-badge">
+                    <div class="dot"></div>
+                    Aktif
+                </div>
+            </div>
+        </header>
+
+        <!-- Profile Bar -->
+        <div class="profile-bar">
+            <button class="profile-btn active" onclick="setProfile('balanced')">⚡ Dengeli</button>
+            <button class="profile-btn" onclick="setProfile('gaming')">🎮 Oyun</button>
+            <button class="profile-btn" onclick="setProfile('work')">💼 İş</button>
+            <button class="profile-btn" onclick="setProfile('power_saver')">🔋 Tasarruf</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="grid">
+                <!-- CPU Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">🖥️ İşlemci (CPU)</div>
+                        <span class="card-sub" id="cpu-freq"></span>
+                    </div>
+                    <div class="card-value" id="cpu-percent" style="color: var(--accent-blue);">--%</div>
+                    <div class="card-sub" id="cpu-cores"></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill green" id="cpu-bar" style="width:0%"></div>
+                    </div>
+                    <div class="core-bars" id="core-bars"></div>
+                </div>
+
+                <!-- RAM Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">🧠 Bellek (RAM)</div>
+                    </div>
+                    <div class="card-value" id="ram-percent" style="color: var(--accent-purple);">--%</div>
+                    <div class="card-sub" id="ram-detail"></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill green" id="ram-bar" style="width:0%"></div>
+                    </div>
+                </div>
+
+                <!-- Disk Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">💾 Diskler</div>
+                    </div>
+                    <div class="disk-list" id="disk-list">
+                        <div class="card-sub">Yükleniyor...</div>
+                    </div>
+                </div>
+
+                <!-- Network Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">🌐 Ağ</div>
+                    </div>
+                    <div class="net-stats" id="net-stats">
+                        <div class="net-stat">
+                            <div class="net-stat-label">↑ Gönderilen</div>
+                            <div class="net-stat-value" id="net-sent">--</div>
+                        </div>
+                        <div class="net-stat">
+                            <div class="net-stat-label">↓ Alınan</div>
+                            <div class="net-stat-value" id="net-recv">--</div>
+                        </div>
+                        <div class="net-stat">
+                            <div class="net-stat-label">Paket ↑</div>
+                            <div class="net-stat-value" id="net-psent">--</div>
+                        </div>
+                        <div class="net-stat">
+                            <div class="net-stat-label">Paket ↓</div>
+                            <div class="net-stat-value" id="net-precv">--</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Processes Card -->
+                <div class="card grid-full">
+                    <div class="card-header">
+                        <div class="card-title">📋 Süreçler (Top 20)</div>
+                        <span class="card-sub" id="proc-count"></span>
+                    </div>
+                    <table class="process-table">
+                        <thead>
+                            <tr>
+                                <th>PID</th>
+                                <th>İsim</th>
+                                <th>CPU %</th>
+                                <th>RAM</th>
+                                <th>Durum</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="proc-tbody">
+                            <tr><td colspan="6" style="text-align:center;color:var(--text-dim)">Yükleniyor...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function getColor(percent) {
+            if (percent >= 90) return 'red';
+            if (percent >= 70) return 'yellow';
+            return 'green';
+        }
+
+        function getCSSColor(percent) {
+            if (percent >= 90) return 'var(--accent-red)';
+            if (percent >= 70) return 'var(--accent-yellow)';
+            return 'var(--accent-green)';
+        }
+
+        async function fetchSystem() {
+            try {
+                const res = await fetch('/api/system');
+                const d = await res.json();
+
+                // CPU
+                document.getElementById('cpu-percent').textContent = d.cpu.percent.toFixed(1) + '%';
+                document.getElementById('cpu-percent').style.color = getCSSColor(d.cpu.percent);
+                document.getElementById('cpu-freq').textContent = d.cpu.freq.toFixed(0) + ' MHz';
+                document.getElementById('cpu-cores').textContent = d.cpu.cores + ' çekirdek';
+
+                const cpuBar = document.getElementById('cpu-bar');
+                cpuBar.style.width = d.cpu.percent + '%';
+                cpuBar.className = 'progress-fill ' + getColor(d.cpu.percent);
+
+                // Core bars
+                const coreBars = document.getElementById('core-bars');
+                coreBars.innerHTML = d.cpu.per_core.map(v =>
+                    `<div class="core-bar" style="height:${Math.max(v, 3)}%;background:${getCSSColor(v)}"></div>`
+                ).join('');
+
+                // RAM
+                document.getElementById('ram-percent').textContent = d.ram.percent.toFixed(1) + '%';
+                document.getElementById('ram-percent').style.color = getCSSColor(d.ram.percent);
+                document.getElementById('ram-detail').textContent = `${d.ram.used} / ${d.ram.total} (Kullanılabilir: ${d.ram.available})`;
+
+                const ramBar = document.getElementById('ram-bar');
+                ramBar.style.width = d.ram.percent + '%';
+                ramBar.className = 'progress-fill ' + getColor(d.ram.percent);
+
+                // Uptime
+                document.getElementById('uptime').textContent = '⏱ ' + d.uptime;
+
+            } catch(e) {
+                console.error('System fetch error:', e);
+            }
+        }
+
+        async function fetchProcesses() {
+            try {
+                const res = await fetch('/api/processes');
+                const procs = await res.json();
+
+                document.getElementById('proc-count').textContent = procs.length + ' süreç';
+
+                const tbody = document.getElementById('proc-tbody');
+                tbody.innerHTML = procs.slice(0, 20).map(p => `
+                    <tr>
+                        <td style="color:var(--text-dim)">${p.pid}</td>
+                        <td class="process-name">${p.name}</td>
+                        <td style="color:${getCSSColor(p.cpu)}">${p.cpu.toFixed(1)}%</td>
+                        <td>${p.ram}</td>
+                        <td style="color:var(--text-dim)">${p.status}</td>
+                        <td><button class="process-kill" onclick="killProcess(${p.pid})">✕</button></td>
+                    </tr>
+                `).join('');
+
+            } catch(e) {
+                console.error('Process fetch error:', e);
+            }
+        }
+
+        async function fetchDisks() {
+            try {
+                const res = await fetch('/api/disks');
+                const disks = await res.json();
+
+                const list = document.getElementById('disk-list');
+                list.innerHTML = disks.map(d => `
+                    <div class="disk-item">
+                        <div class="disk-icon">💿</div>
+                        <div class="disk-info">
+                            <div class="disk-name">${d.device}</div>
+                            <div class="disk-detail">${d.used} / ${d.total} | ${d.fstype}</div>
+                        </div>
+                        <div class="disk-progress">
+                            <div class="progress-fill ${getColor(d.percent)}" style="width:${d.percent}%"></div>
+                        </div>
+                        <div class="disk-percent" style="color:${getCSSColor(d.percent)}">${d.percent.toFixed(0)}%</div>
+                    </div>
+                `).join('');
+
+            } catch(e) {
+                console.error('Disk fetch error:', e);
+            }
+        }
+
+        async function fetchNetwork() {
+            try {
+                const res = await fetch('/api/network');
+                const d = await res.json();
+
+                document.getElementById('net-sent').textContent = d.bytes_sent || '--';
+                document.getElementById('net-recv').textContent = d.bytes_recv || '--';
+                document.getElementById('net-psent').textContent = (d.packets_sent || 0).toLocaleString();
+                document.getElementById('net-precv').textContent = (d.packets_recv || 0).toLocaleString();
+
+            } catch(e) {
+                console.error('Network fetch error:', e);
+            }
+        }
+
+        async function killProcess(pid) {
+            if (!confirm('Bu süreci sonlandırmak istediğinize emin misiniz?')) return;
+
+            try {
+                const res = await fetch(`/api/process/${pid}/kill`, { method: 'POST' });
+                const data = await res.json();
+                if (data.success) {
+                    fetchProcesses();
+                } else {
+                    alert('Hata: ' + (data.error || 'Bilinmeyen hata'));
+                }
+            } catch(e) {
+                alert('İstek hatası: ' + e.message);
+            }
+        }
+
+        async function setProfile(name) {
+            try {
+                const res = await fetch(`/api/profile/${name}`, { method: 'POST' });
+                const data = await res.json();
+                if (data.success) {
+                    document.querySelectorAll('.profile-btn').forEach(b => b.classList.remove('active'));
+                    event.target.classList.add('active');
+                }
+            } catch(e) {
+                console.error('Profile error:', e);
+            }
+        }
+
+        // Initial fetch
+        fetchSystem();
+        fetchProcesses();
+        fetchDisks();
+        fetchNetwork();
+
+        // Auto-refresh
+        setInterval(fetchSystem, 2000);
+        setInterval(fetchProcesses, 5000);
+        setInterval(fetchDisks, 30000);
+        setInterval(fetchNetwork, 3000);
+    </script>
+</body>
+</html>

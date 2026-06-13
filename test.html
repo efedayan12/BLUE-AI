@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLUE_AI</title>
+<style>
+:root {
+    --bg-primary: #030712;
+    --bg-secondary: #0f172a;
+    --bg-card: rgba(15, 23, 42, 0.4);
+    --bg-card-hover: rgba(30, 41, 59, 0.6);
+    --accent-blue: #3b82f6;
+    --accent-cyan: #06b6d4;
+    --accent-green: #10b981;
+    --accent-yellow: #f59e0b;
+    --accent-red: #ef4444;
+    --accent-purple: #8b5cf6;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-dim: #64748b;
+    --border: rgba(255, 255, 255, 0.05);
+    --blur-intensity: blur(20px);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background:
+        radial-gradient(circle at 10% 50%, rgba(59, 130, 246, 0.08), transparent 40%),
+        radial-gradient(circle at 90% 20%, rgba(139, 92, 246, 0.08), transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(6, 182, 212, 0.05), transparent 40%);
+    z-index: 0; pointer-events: none;
+    animation: flowBg 15s ease-in-out infinite alternate;
+}
+
+@keyframes flowBg {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* ========= HEADER ========= */
+.header {
+    background: rgba(3, 7, 18, 0.6);
+    backdrop-filter: var(--blur-intensity);
+    -webkit-backdrop-filter: var(--blur-intensity);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    -webkit-app-region: drag;
+}
+
+.header-logo { display: flex; align-items: center; gap: 0.8rem; }
+.header-logo .dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--accent-blue);
+    box-shadow: 0 0 15px var(--accent-blue);
+    animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 15px var(--accent-blue); }
+    50% { transform: scale(1.1); opacity: 0.8; box-shadow: 0 0 25px var(--accent-blue); }
+}
+.header-logo h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem; font-weight: 700; letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #60a5fa, #c084fc);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.header-right { display: flex; align-items: center; gap: 1rem; -webkit-app-region: no-drag; }
+
+.badge {
+    padding: 0.35rem 0.8rem; border-radius: 999px; font-size: 0.75rem; font-weight: 500;
+    display: flex; align-items: center; gap: 0.4rem; font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02);
+}
+.badge:hover { background: rgba(255,255,255,0.05); }
+.badge-green { color: #34d399; border-color: rgba(16, 185, 129, 0.2); background: rgba(16, 185, 129, 0.05); }
+.badge-purple { color: #a78bfa; border-color: rgba(139, 92, 246, 0.2); background: rgba(139, 92, 246, 0.05);}
+.badge .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+/* ========= NAV ========= */
+.nav {
+    display: flex; gap: 10px; padding: 1rem 1.8rem;
+    background: transparent;
+    z-index: 10; border-bottom: 1px solid rgba(255,255,255,0.02);
+}
+.nav-btn {
+    padding: 0.5rem 1.2rem; border: none; border-radius: 999px;
+    background: transparent; color: var(--text-secondary); cursor: pointer;
+    font-size: 0.85rem; font-weight: 500; transition: all 0.3s;
+    font-family: 'Outfit', sans-serif; letter-spacing: 0.5px; position: relative;
+    overflow: hidden;
+}
+.nav-btn::before {
+    content:''; position:absolute; top:0;left:0;right:0;bottom:0; background:rgba(255,255,255,0.05); transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-btn:hover::before { transform: translateY(0); }
+.nav-btn:hover { color: var(--text-primary); }
+.nav-btn.active {
+    background: rgba(59, 130, 246, 0.1); color: #60a5fa; box-shadow: inset 0 0 0 1px rgba(59, 130, 246, 0.3);
+}
+
+/* ========= MAIN LAYOUT ========= */
+.main-layout {
+    flex: 1; display: flex; overflow: hidden; position: relative; z-index: 1;
+}
+.content { flex: 1; overflow-y: auto; padding: 1.5rem; }
+.page { display: none; animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.page.active { display: block; }
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========= CHAT SIDEBAR ========= */
+.chat-sidebar {
+    width: 380px; background: rgba(3, 7, 18, 0.5);
+    backdrop-filter: var(--blur-intensity); -webkit-backdrop-filter: var(--blur-intensity);
+    border-left: 1px solid var(--border);
+    display: flex; flex-direction: column;
+}
+.chat-header {
+    padding: 1rem 1.5rem; border-bottom: 1px solid var(--border);
+    font-size: 0.9rem; font-weight: 600; color: #a78bfa;
+    font-family: 'Outfit', sans-serif; letter-spacing: 0.5px;
+}
+.chat-messages {
+    flex: 1; overflow-y: auto; padding: 1.5rem;
+    display: flex; flex-direction: column; gap: 1rem;
+}
+.chat-msg {
+    padding: 1rem 1.2rem; border-radius: 12px;
+    font-size: 0.85rem; line-height: 1.6; max-width: 90%;
+    white-space: pre-wrap; word-break: break-word;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.95) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.chat-msg.user {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.15));
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    align-self: flex-end; color: #f8fafc; border-bottom-right-radius: 4px;
+}
+.chat-msg.ai {
+    background: var(--bg-card); border: 1px solid var(--border);
+    align-self: flex-start; color: var(--text-primary); border-bottom-left-radius: 4px;
+}
+.chat-msg.ai.success { border-color: rgba(16, 185, 129, 0.3); }
+.chat-msg.ai.warning { border-color: rgba(245, 158, 11, 0.3); }
+.chat-msg.ai.confirm { border-color: rgba(239, 68, 68, 0.4); }
+
+.chat-input-area {
+    padding: 1.2rem; border-top: 1px solid var(--border);
+    background: rgba(3, 7, 18, 0.8);
+    display: flex; gap: 0.8rem; align-items: center;
+}
+.chat-mic {
+    background: rgba(255,255,255,0.03) !important; border: 1px solid var(--border) !important;
+    border-radius: 12px !important; color: var(--text-primary) !important;
+    width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important; flex-shrink: 0;
+}
+.chat-mic:hover { background: rgba(59, 130, 246, 0.15) !important; border-color: rgba(59, 130, 246, 0.4) !important; transform: scale(1.05); }
+
+.chat-input {
+    flex: 1; padding: 0.8rem 1rem; border-radius: 12px;
+    border: 1px solid var(--border); background: rgba(15, 23, 42, 0.5);
+    color: var(--text-primary); font-size: 0.9rem;
+    font-family: inherit; outline: none; transition: all 0.3s;
+}
+.chat-input:focus { border-color: var(--accent-blue); background: rgba(15, 23, 42, 0.8); box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); }
+.chat-send {
+    padding: 0 1.2rem; border-radius: 12px; border: none; height: 44px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; cursor: pointer;
+    font-size: 0.85rem; font-weight: 600; font-family: 'Outfit', sans-serif;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.chat-send:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3); }
+
+/* ========= CARDS ========= */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+.card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative; overflow: hidden;
+}
+.card::before {
+    content: ''; position: absolute; top:0;left:0; width:100%; height:1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+}
+.card:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.1); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2); background: var(--bg-card-hover); }
+
+.card-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+.card-title {
+    font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);
+    text-transform: uppercase; letter-spacing: 0.1em; font-family: 'Outfit', sans-serif;
+}
+.card-value { font-size: 2.8rem; font-weight: 700; line-height: 1; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;}
+.card-sub { font-size: 0.85rem; color: var(--text-dim); }
+
+/* Progress */
+.progress { width: 100%; height: 8px; background: rgba(0,0,0,0.2); border-radius: 999px; overflow: hidden; margin-top: 1rem; }
+.progress-fill { height: 100%; border-radius: 999px; transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1); position: relative; }
+.progress-fill::after { content:''; position:absolute; top:0;left:0;right:0;bottom:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent); animation:shimmer 2s infinite;}
+@keyframes shimmer { 0% { transform:translateX(-100%); } 100% { transform:translateX(100%); } }
+
+.progress-fill.green { background: linear-gradient(90deg, #10b981, #059669); }
+.progress-fill.yellow { background: linear-gradient(90deg, #f59e0b, #d97706); }
+.progress-fill.red { background: linear-gradient(90deg, #ef4444, #dc2626); }
+
+/* Core bars */
+.core-bars { display: flex; gap: 4px; margin-top: 1.2rem; align-items: end; height: 60px; }
+.core-bar { flex: 1; border-radius: 4px 4px 0 0; transition: height 0.5s cubic-bezier(0.16, 1, 0.3, 1); min-height: 4px; opacity: 0.7; }
+.core-bar:hover { opacity: 1; }
+
+/* Net stats */
+.net-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.net-stat { padding: 1.2rem; background: rgba(0,0,0,0.15); border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.02);}
+.net-stat-value { font-size: 1.5rem; font-weight: 700; margin-top: 0.5rem; font-family: 'Outfit', sans-serif;}
+.net-stat-label { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;}
+
+/* Process table */
+.ptable { width: 100%; border-collapse: separate; border-spacing: 0; }
+.ptable th {
+    font-size: 0.75rem; font-weight: 600; color: var(--text-dim);
+    text-transform: uppercase; padding: 1rem; text-align: left;
+    border-bottom: 1px solid var(--border); letter-spacing: 0.05em;
+}
+.ptable td { padding: 0.8rem 1rem; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.02); }
+.ptable tr:hover td { background: rgba(255,255,255,0.02); }
+.kill-btn {
+    background: transparent; border: 1px solid rgba(239,68,68,0.3);
+    color: #fca5a5; padding: 0.3rem 0.8rem; border-radius: 8px;
+    cursor: pointer; font-size: 0.75rem; font-weight: 500; transition: all 0.2s;
+}
+.kill-btn:hover { background: rgba(239,68,68,0.15); border-color: rgba(239,68,68,0.5); color: #fee2e2; }
+
+/* Profile buttons in header */
+.profile-btns { display: flex; gap: 4px; background: rgba(0,0,0,0.2); padding: 4px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);}
+.pbtn {
+    padding: 0.4rem 0.8rem; border: none;
+    border-radius: 6px; background: transparent; color: var(--text-secondary);
+    cursor: pointer; font-size: 0.75rem; font-weight: 500; transition: all 0.3s;
+}
+.pbtn:hover { color: var(--text-primary); }
+.pbtn.active { background: rgba(255,255,255,0.1); color: var(--text-primary); box-shadow: 0 1px 3px rgba(0,0,0,0.2);}
+
+/* Disk */
+.disk-item { display: flex; align-items: center; gap: 1.2rem; padding: 1.2rem; background: rgba(0,0,0,0.15); border-radius: 12px; margin-bottom: 0.8rem; border: 1px solid rgba(255,255,255,0.02); transition: all 0.2s;}
+.disk-item:hover { background: rgba(255,255,255,0.03); transform: scale(1.01);}
+.disk-info { flex: 1; }
+.disk-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.3rem;}
+.disk-detail { font-size: 0.8rem; color: var(--text-dim); }
+.disk-progress { width: 150px; height: 6px; background: rgba(0,0,0,0.2); border-radius: 999px; overflow: hidden; }
+.disk-pct { font-size: 0.9rem; font-weight: 700; min-width: 50px; text-align: right; color: var(--accent-cyan); font-family: 'Outfit', sans-serif;}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+</style>
+</head>
+<body>
+<!-- HEADER -->
+<header class="header">
+    <div class="header-logo">
+        <div class="dot"></div>
+        <h1>BLUE_AI</h1>
+    </div>
+    <div class="header-right">
+        <div class="profile-btns">
+            <button class="pbtn active" onclick="setProfile('balanced',this)">Dengeli</button>
+            <button class="pbtn" onclick="setProfile('gaming',this)">Oyun</button>
+            <button class="pbtn" onclick="setProfile('work',this)">Is</button>
+            <button class="pbtn" onclick="setProfile('power_saver',this)">Tasarruf</button>
+        </div>
+        <div class="badge badge-purple" id="uptime">Yukleniyor...</div>
+        <div class="badge badge-green" id="llm-status"><div class="dot"></div>LLM</div>
+        <div class="badge badge-green"><div class="dot"></div>Aktif</div>
+    </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+    <button class="nav-btn active" onclick="showPage('dashboard',this)">Dashboard</button>
+    <button class="nav-btn" onclick="showPage('processes',this)">Surecler</button>
+    <button class="nav-btn" onclick="showPage('disks',this)">Diskler</button>
+    <button class="nav-btn" onclick="showPage('network',this)">Ag</button>
+</nav>
+
+<!-- MAIN -->
+<div class="main-layout">
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- DASHBOARD PAGE -->
+        <div class="page active" id="page-dashboard">
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header"><div class="card-title">Islemci (CPU)</div><span class="card-sub" id="cpu-freq"></span></div>
+                    <div class="card-value" id="cpu-pct" style="color:var(--accent-blue)">--%</div>
+                    <div class="card-sub" id="cpu-cores"></div>
+                    <div class="progress"><div class="progress-fill green" id="cpu-bar" style="width:0%"></div></div>
+                    <div class="core-bars" id="core-bars"></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><div class="card-title">Bellek (RAM)</div></div>
+                    <div class="card-value" id="ram-pct" style="color:var(--accent-purple)">--%</div>
+                    <div class="card-sub" id="ram-detail"></div>
+                    <div class="progress"><div class="progress-fill green" id="ram-bar" style="width:0%"></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><div class="card-title">Disk (C:)</div></div>
+                    <div class="card-value" id="disk-pct" style="color:var(--accent-cyan)">--%</div>
+                    <div class="card-sub" id="disk-detail"></div>
+                    <div class="progress"><div class="progress-fill green" id="disk-bar" style="width:0%"></div></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><div class="card-title">Ag</div></div>
+                    <div class="net-stats">
+                        <div class="net-stat"><div class="net-stat-label">Gonderilen</div><div class="net-stat-value" id="n-sent">--</div></div>
+                        <div class="net-stat"><div class="net-stat-label">Alinan</div><div class="net-stat-value" id="n-recv">--</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROCESSES PAGE -->
+        <div class="page" id="page-processes">
+            <div class="card">
+                <div class="card-header"><div class="card-title">Calisan Surecler</div><span class="card-sub" id="proc-count"></span></div>
+                <table class="ptable">
+                    <thead><tr><th>PID</th><th>Isim</th><th>CPU %</th><th>RAM</th><th>Durum</th><th></th></tr></thead>
+                    <tbody id="proc-tbody"><tr><td colspan="6" style="text-align:center;color:var(--text-dim)">Yukleniyor...</td></tr></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- DISKS PAGE -->
+        <div class="page" id="page-disks">
+            <div class="card">
+                <div class="card-header"><div class="card-title">Disk Bilgileri</div></div>
+                <div id="disk-list">Yukleniyor...</div>
+            </div>
+        </div>
+
+        <!-- NETWORK PAGE -->
+        <div class="page" id="page-network">
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header"><div class="card-title">Ag Istatistikleri</div></div>
+                    <div class="net-stats" id="net-full">
+                        <div class="net-stat"><div class="net-stat-label">Gonderilen</div><div class="net-stat-value" id="nf-sent">--</div></div>
+                        <div class="net-stat"><div class="net-stat-label">Alinan</div><div class="net-stat-value" id="nf-recv">--</div></div>
+                        <div class="net-stat"><div class="net-stat-label">Paket Giden</div><div class="net-stat-value" id="nf-psent">--</div></div>
+                        <div class="net-stat"><div class="net-stat-label">Paket Gelen</div><div class="net-stat-value" id="nf-precv">--</div></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><div class="card-title">Baglantilar</div></div>
+                    <div class="card-value" id="conn-count" style="color:var(--accent-cyan)">--</div>
+                    <div class="card-sub">aktif baglanti</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHAT SIDEBAR -->
+    <div class="chat-sidebar">
+        <div class="chat-header">🧠 BLUE AI Asistan <span id="model-name" style="font-size:0.65rem;color:var(--text-dim);font-weight:400"></span></div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="chat-msg ai">Merhaba! Ben BLUE AI 🔵<br><br>Sistemini yonetebilir, sorularini cevaplayabilir ve gorevlerini yerine getirebilirim.<br><br>'yardim' yazarak neler yapabilecegimi gorebilirsin!</div>
+        </div>
+        <div class="chat-input-area">
+            <button class="chat-mic" onclick="listenMic()" id="mic-btn" style="background:transparent;border:1px solid var(--border);border-radius:10px;color:var(--text-primary);padding:0 0.8rem;cursor:pointer;transition:all 0.2s;" title="Sesli Komut İcin Tıklayın">🎙️</button>
+            <input class="chat-input" id="chat-input" placeholder="Bir sey sor veya komut ver..." onkeydown="if(event.key==='Enter')sendChat()">
+            <button class="chat-send" onclick="sendChat()">Gonder</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function gc(p) { return p >= 90 ? 'red' : p >= 70 ? 'yellow' : 'green'; }
+function gcc(p) { return p >= 90 ? 'var(--accent-red)' : p >= 70 ? 'var(--accent-yellow)' : 'var(--accent-green)'; }
+
+function showPage(name, btn) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('page-' + name).classList.add('active');
+    if(btn) btn.classList.add('active');
+}
+
+async function fetchSystem() {
+    try {
+        const raw = await pywebview.api.get_system_data();
+        const d = JSON.parse(raw);
+        document.getElementById('cpu-pct').textContent = d.cpu.percent.toFixed(1) + '%';
+        document.getElementById('cpu-pct').style.color = gcc(d.cpu.percent);
+        document.getElementById('cpu-freq').textContent = d.cpu.freq.toFixed(0) + ' MHz';
+        document.getElementById('cpu-cores').textContent = d.cpu.cores + ' cekirdek';
+        const cpuBar = document.getElementById('cpu-bar');
+        cpuBar.style.width = d.cpu.percent + '%';
+        cpuBar.className = 'progress-fill ' + gc(d.cpu.percent);
+        document.getElementById('core-bars').innerHTML = d.cpu.per_core.map(v =>
+            '<div class="core-bar" style="height:'+Math.max(v,3)+'%;background:'+gcc(v)+'"></div>'
+        ).join('');
+        document.getElementById('ram-pct').textContent = d.ram.percent.toFixed(1) + '%';
+        document.getElementById('ram-pct').style.color = gcc(d.ram.percent);
+        document.getElementById('ram-detail').textContent = d.ram.used + ' / ' + d.ram.total;
+        const ramBar = document.getElementById('ram-bar');
+        ramBar.style.width = d.ram.percent + '%';
+        ramBar.className = 'progress-fill ' + gc(d.ram.percent);
+        document.getElementById('disk-pct').textContent = d.disk.percent.toFixed(1) + '%';
+        document.getElementById('disk-pct').style.color = gcc(d.disk.percent);
+        document.getElementById('disk-detail').textContent = d.disk.used + ' / ' + d.disk.total + ' (Bos: ' + d.disk.free + ')';
+        const diskBar = document.getElementById('disk-bar');
+        diskBar.style.width = d.disk.percent + '%';
+        diskBar.className = 'progress-fill ' + gc(d.disk.percent);
+        document.getElementById('uptime').textContent = d.uptime;
+    } catch(e) { console.error(e); }
+}
+
+async function fetchProcesses() {
+    try {
+        const raw = await pywebview.api.get_processes();
+        const procs = JSON.parse(raw);
+        document.getElementById('proc-count').textContent = procs.length + ' surec';
+        document.getElementById('proc-tbody').innerHTML = procs.slice(0,30).map(p =>
+            '<tr><td style="color:var(--text-dim)">'+p.pid+'</td><td style="font-weight:500">'+p.name+'</td><td style="color:'+gcc(p.cpu)+'">'+p.cpu.toFixed(1)+'%</td><td>'+p.ram+'</td><td style="color:var(--text-dim)">'+p.status+'</td><td><button class="kill-btn" onclick="killProc('+p.pid+')">X</button></td></tr>'
+        ).join('');
+    } catch(e) { console.error(e); }
+}
+
+async function fetchNetwork() {
+    try {
+        const raw = await pywebview.api.get_network();
+        const d = JSON.parse(raw);
+        document.getElementById('n-sent').textContent = d.bytes_sent || '--';
+        document.getElementById('n-recv').textContent = d.bytes_recv || '--';
+        document.getElementById('nf-sent').textContent = d.bytes_sent || '--';
+        document.getElementById('nf-recv').textContent = d.bytes_recv || '--';
+        document.getElementById('nf-psent').textContent = (d.packets_sent||0).toLocaleString();
+        document.getElementById('nf-precv').textContent = (d.packets_recv||0).toLocaleString();
+        document.getElementById('conn-count').textContent = d.connections || '--';
+    } catch(e) { console.error(e); }
+}
+
+async function fetchDisks() {
+    try {
+        const raw = await pywebview.api.get_disks();
+        const disks = JSON.parse(raw);
+        document.getElementById('disk-list').innerHTML = disks.map(d =>
+            '<div class="disk-item"><div class="disk-info"><div class="disk-name">'+d.device+'</div><div class="disk-detail">'+d.used+' / '+d.total+' | '+d.fstype+'</div></div><div class="disk-progress"><div class="progress-fill '+gc(d.percent)+'" style="width:'+d.percent+'%"></div></div><div class="disk-pct" style="color:'+gcc(d.percent)+'">'+d.percent.toFixed(0)+'%</div></div>'
+        ).join('');
+    } catch(e) { console.error(e); }
+}
+
+async function killProc(pid) {
+    if(!confirm('Bu sureci sonlandirmak istediginize emin misiniz?')) return;
+    const raw = await pywebview.api.kill_process(pid);
+    const r = JSON.parse(raw);
+    if(r.success) fetchProcesses();
+    else alert(r.message);
+}
+
+async function setProfile(name, btn) {
+    const raw = await pywebview.api.set_profile(name);
+    const r = JSON.parse(raw);
+    if(r.success) {
+        document.querySelectorAll('.pbtn').forEach(b => b.classList.remove('active'));
+        if(btn) btn.classList.add('active');
+        addChat('ai', 'Profil degistirildi: ' + name, 'success');
+    }
+}
+
+async function listenMic() {
+    if(isSending) return;
+    const btn = document.getElementById('mic-btn');
+    btn.style.borderColor = 'var(--accent-green)';
+    btn.textContent = '🛑';
+    addChat('user', '🎙️ (Dinliyor...)', 'thinking');
+    isSending = true;
+
+    try {
+        const raw = await pywebview.api.listen_voice();
+        const r = JSON.parse(raw);
+        removeThinking();
+        if(r.recognized_text) {
+            addChat('user', r.recognized_text);
+        } else {
+            addChat('user', '🎙️ (Tam anlasilamadi)');
+        }
+        
+        if(r.type === 'confirm' && r.pending_confirmation) {
+            addConfirmation(r.response, r.pending_confirmation);
+        } else {
+            addChat('ai', r.response, r.type);
+        }
+    } catch(e) {
+        removeThinking();
+        addChat('ai', 'Hata: ' + e.message, 'warning');
+    }
+    
+    isSending = false;
+    btn.style.borderColor = 'var(--border)';
+    btn.textContent = '🎙️';
+}
+
+let isSending = false;
+async function sendChat() {
+    if(isSending) return;
+    const input = document.getElementById('chat-input');
+    const msg = input.value.trim();
+    if(!msg) return;
+    input.value = '';
+    addChat('user', msg);
+    isSending = true;
+    addChat('ai', 'Dusunuyor...', 'thinking');
+    try {
+        const raw = await pywebview.api.process_chat(msg);
+        const r = JSON.parse(raw);
+        removeThinking();
+        if(r.type === 'confirm' && r.pending_confirmation) {
+            addConfirmation(r.response, r.pending_confirmation);
+        } else {
+            addChat('ai', r.response, r.type);
+        }
+    } catch(e) {
+        removeThinking();
+        addChat('ai', 'Hata: ' + e.message, 'warning');
+    }
+    isSending = false;
+}
+
+function removeThinking() {
+    const box = document.getElementById('chat-messages');
+    const thinking = box.querySelector('.thinking');
+    if(thinking) thinking.remove();
+}
+
+function addChat(who, text, type) {
+    const box = document.getElementById('chat-messages');
+    const div = document.createElement('div');
+    div.className = 'chat-msg ' + who + (type ? ' ' + type : '');
+    div.textContent = text;
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+}
+
+function addConfirmation(message, confirmation) {
+    const box = document.getElementById('chat-messages');
+    const div = document.createElement('div');
+    div.className = 'chat-msg ai confirm';
+    div.innerHTML = `
+        <div style="margin-bottom:0.5rem"></div>
+        <div style="display:flex;gap:0.4rem">
+            <button onclick="handleConfirm('${confirmation.tool_name}',true,this)" 
+                    style="padding:0.3rem 0.8rem;border-radius:8px;border:1px solid rgba(16,185,129,0.4);
+                    background:rgba(16,185,129,0.15);color:var(--accent-green);cursor:pointer;font-family:inherit;font-size:0.75rem">
+                ✓ Evet, yap
+            </button>
+            <button onclick="handleConfirm('${confirmation.tool_name}',false,this)" 
+                    style="padding:0.3rem 0.8rem;border-radius:8px;border:1px solid rgba(239,68,68,0.4);
+                    background:rgba(239,68,68,0.15);color:var(--accent-red);cursor:pointer;font-family:inherit;font-size:0.75rem">
+                ✗ Hayir, iptal
+            </button>
+        </div>`;
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+}
+
+async function handleConfirm(toolName, approved, btn) {
+    btn.parentElement.querySelectorAll('button').forEach(b => b.disabled = true);
+    try {
+        const raw = await pywebview.api.confirm_action(toolName, approved);
+        const r = JSON.parse(raw);
+        addChat('ai', r.response, r.type);
+    } catch(e) {
+        addChat('ai', 'Hata: ' + e.message, 'warning');
+    }
+}
+
+async function checkLLMStatus() {
+    try {
+        const raw = await pywebview.api.get_llm_status();
+        const r = JSON.parse(raw);
+        const badge = document.getElementById('llm-status');
+        const modelSpan = document.getElementById('model-name');
+        if(r.available) {
+            badge.className = 'badge badge-green';
+            badge.innerHTML = '<div class="dot"></div>LLM';
+            if(modelSpan && r.active_model) modelSpan.textContent = '(' + r.active_model + ')';
+        } else {
+            badge.className = 'badge';
+            badge.style.background = 'rgba(239,68,68,0.12)';
+            badge.style.border = '1px solid rgba(239,68,68,0.3)';
+            badge.style.color = 'var(--accent-red)';
+            badge.innerHTML = 'LLM Offline';
+            if(modelSpan) modelSpan.textContent = '(offline)';
+        }
+    } catch(e) {}
+}
+
+// Wait for pywebview
+window.addEventListener('pywebviewready', () => {
+    try {
+        fetchSystem(); fetchProcesses(); fetchDisks(); fetchNetwork(); checkLLMStatus();
+        setInterval(fetchSystem, 2000);
+        setInterval(fetchProcesses, 5000);
+        setInterval(fetchDisks, 30000);
+        setInterval(fetchNetwork, 3000);
+        setInterval(checkLLMStatus, 15000);
+    } catch(e) {
+        document.getElementById('uptime').textContent = 'Error: ' + e.message;
+    }
+});
+window.onerror = function(msg, url, line, col, error) {
+    document.getElementById('uptime').textContent = 'Global Edit: ' + msg;
+};
+</script>
+</body>
+</html>

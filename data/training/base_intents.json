@@ -1,0 +1,6650 @@
+{
+  "meta": {
+    "version": "1.0",
+    "total_base_examples": 1629,
+    "num_intents": 123,
+    "intents": [
+      "balanced_mode",
+      "battery_info",
+      "budget_track",
+      "calculate_math",
+      "calendar_event",
+      "calorie_info",
+      "change_brightness",
+      "change_volume",
+      "change_wallpaper",
+      "clean_system",
+      "clipboard_manage",
+      "close_app",
+      "compare_things",
+      "compliment",
+      "convert_unit",
+      "cpu_info",
+      "create_document",
+      "create_presentation",
+      "create_spreadsheet",
+      "currency_convert",
+      "debug_help",
+      "define_word",
+      "disk_info",
+      "edit_document",
+      "exercise_suggest",
+      "explain_code",
+      "explain_topic",
+      "fact_check",
+      "farewell",
+      "file_compress",
+      "file_copy",
+      "file_delete",
+      "file_extract",
+      "file_info",
+      "file_move",
+      "file_organize",
+      "file_rename",
+      "file_search",
+      "find_place",
+      "focus_mode",
+      "folder_create",
+      "gaming_mode",
+      "general_question",
+      "get_directions",
+      "give_advice",
+      "gmail_draft",
+      "gmail_forward",
+      "gmail_read",
+      "gmail_reply",
+      "gmail_search",
+      "gmail_send",
+      "greeting",
+      "health_tip",
+      "help",
+      "how_are_you",
+      "install_app",
+      "list_steps",
+      "lock_screen",
+      "network_info",
+      "night_mode",
+      "note_take",
+      "open_app",
+      "open_url",
+      "optimize_system",
+      "password_generate",
+      "play_game",
+      "play_music",
+      "pomodoro_start",
+      "power_saver_mode",
+      "price_compare",
+      "print_document",
+      "privacy_check",
+      "process_kill",
+      "process_list",
+      "ram_info",
+      "random_fact",
+      "read_pdf",
+      "recipe_search",
+      "restart_pc",
+      "schedule_meeting",
+      "screen_record",
+      "set_alarm",
+      "set_reminder",
+      "set_timer",
+      "show_date",
+      "show_time",
+      "shutdown_pc",
+      "sleep_mode",
+      "small_talk",
+      "sms_send",
+      "social_post",
+      "startup_manage",
+      "summarize_text",
+      "system_info_detailed",
+      "system_status",
+      "take_screenshot",
+      "tell_joke",
+      "tell_story",
+      "thanks",
+      "todo_add",
+      "todo_list",
+      "toggle_bluetooth",
+      "toggle_wifi",
+      "translate_text",
+      "travel_plan",
+      "virus_scan",
+      "water_reminder",
+      "web_download",
+      "web_news",
+      "web_search",
+      "web_weather",
+      "whatsapp_call",
+      "whatsapp_group",
+      "whatsapp_media",
+      "whatsapp_read",
+      "whatsapp_send",
+      "who_are_you",
+      "work_mode",
+      "write_code",
+      "write_letter",
+      "write_message",
+      "youtube_play",
+      "youtube_search"
+    ]
+  },
+  "data": [
+    {
+      "text": "sistem durumu",
+      "intent": "system_status"
+    },
+    {
+      "text": "bilgisayar nasil",
+      "intent": "system_status"
+    },
+    {
+      "text": "pc durumu ne",
+      "intent": "system_status"
+    },
+    {
+      "text": "sistem nasil",
+      "intent": "system_status"
+    },
+    {
+      "text": "bilgisayarin durumu nedir",
+      "intent": "system_status"
+    },
+    {
+      "text": "genel durum",
+      "intent": "system_status"
+    },
+    {
+      "text": "sistem bilgisi",
+      "intent": "system_status"
+    },
+    {
+      "text": "bilgisayar sagligi",
+      "intent": "system_status"
+    },
+    {
+      "text": "sistem ozeti",
+      "intent": "system_status"
+    },
+    {
+      "text": "makine durumu",
+      "intent": "system_status"
+    },
+    {
+      "text": "pc ne durumda",
+      "intent": "system_status"
+    },
+    {
+      "text": "bilgisayar iyi mi",
+      "intent": "system_status"
+    },
+    {
+      "text": "sistem kontrolu",
+      "intent": "system_status"
+    },
+    {
+      "text": "sistem performansi",
+      "intent": "system_status"
+    },
+    {
+      "text": "donanim durumu",
+      "intent": "system_status"
+    },
+    {
+      "text": "genel sistem durumu",
+      "intent": "system_status"
+    },
+    {
+      "text": "her sey yolunda mi",
+      "intent": "system_status"
+    },
+    {
+      "text": "bilgisayar saglikli mi",
+      "intent": "system_status"
+    },
+    {
+      "text": "sistem raporu",
+      "intent": "system_status"
+    },
+    {
+      "text": "bilgisayarimin durumunu goster",
+      "intent": "system_status"
+    },
+    {
+      "text": "ne durumda sistem",
+      "intent": "system_status"
+    },
+    {
+      "text": "makinenin hali ne",
+      "intent": "system_status"
+    },
+    {
+      "text": "bilgisayar hakkinda bilgi",
+      "intent": "system_status"
+    },
+    {
+      "text": "sistem diagnostik",
+      "intent": "system_status"
+    },
+    {
+      "text": "performans ozeti",
+      "intent": "system_status"
+    },
+    {
+      "text": "cpu kullanimi",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "islemci durumu",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "islemci ne kadar calisiyor",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "cpu yuzde kac",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "islemci yuklenmis mi",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "cpu bilgisi",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "islemci performansi",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "cpu sicakligi",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "islemci modeli",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "islemci hizi ne kadar",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "cpu ne kadar kullaniliyor",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "islemci kapasite",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "cpu detaylari",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "islemci durumunu goster",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "cpu kullanim orani",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "islemci yuzdesi",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "processor bilgisi",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "islemci cekirdek sayisi",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "cpu frekans",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "islemci performans raporu",
+      "intent": "cpu_info"
+    },
+    {
+      "text": "ram durumu",
+      "intent": "ram_info"
+    },
+    {
+      "text": "bellek kullanimi",
+      "intent": "ram_info"
+    },
+    {
+      "text": "ram ne kadar",
+      "intent": "ram_info"
+    },
+    {
+      "text": "hafiza durumu",
+      "intent": "ram_info"
+    },
+    {
+      "text": "bellek bilgisi",
+      "intent": "ram_info"
+    },
+    {
+      "text": "ram doluluk orani",
+      "intent": "ram_info"
+    },
+    {
+      "text": "kullanilan ram",
+      "intent": "ram_info"
+    },
+    {
+      "text": "bos ram ne kadar",
+      "intent": "ram_info"
+    },
+    {
+      "text": "bellek yeterli mi",
+      "intent": "ram_info"
+    },
+    {
+      "text": "ram yuzde kac",
+      "intent": "ram_info"
+    },
+    {
+      "text": "ram detaylari",
+      "intent": "ram_info"
+    },
+    {
+      "text": "bellek miktari",
+      "intent": "ram_info"
+    },
+    {
+      "text": "hafiza ne kadar dolu",
+      "intent": "ram_info"
+    },
+    {
+      "text": "ram kullanim orani",
+      "intent": "ram_info"
+    },
+    {
+      "text": "bellek performansi",
+      "intent": "ram_info"
+    },
+    {
+      "text": "ram bilgisi goster",
+      "intent": "ram_info"
+    },
+    {
+      "text": "toplam ram ne kadar",
+      "intent": "ram_info"
+    },
+    {
+      "text": "kullanilabilir ram",
+      "intent": "ram_info"
+    },
+    {
+      "text": "bellek durumunu kontrol et",
+      "intent": "ram_info"
+    },
+    {
+      "text": "hafiza saglikli mi",
+      "intent": "ram_info"
+    },
+    {
+      "text": "ram sorun var mi",
+      "intent": "ram_info"
+    },
+    {
+      "text": "disk durumu",
+      "intent": "disk_info"
+    },
+    {
+      "text": "disk alani",
+      "intent": "disk_info"
+    },
+    {
+      "text": "depolama ne kadar",
+      "intent": "disk_info"
+    },
+    {
+      "text": "disk doluluk orani",
+      "intent": "disk_info"
+    },
+    {
+      "text": "bos alan ne kadar",
+      "intent": "disk_info"
+    },
+    {
+      "text": "disk bilgisi",
+      "intent": "disk_info"
+    },
+    {
+      "text": "hard disk durumu",
+      "intent": "disk_info"
+    },
+    {
+      "text": "ssd durumu",
+      "intent": "disk_info"
+    },
+    {
+      "text": "disk kullanimi",
+      "intent": "disk_info"
+    },
+    {
+      "text": "depolama alani goster",
+      "intent": "disk_info"
+    },
+    {
+      "text": "disk saglikli mi",
+      "intent": "disk_info"
+    },
+    {
+      "text": "disk kapasitesi",
+      "intent": "disk_info"
+    },
+    {
+      "text": "c surucusu ne kadar dolu",
+      "intent": "disk_info"
+    },
+    {
+      "text": "d surucusu durumu",
+      "intent": "disk_info"
+    },
+    {
+      "text": "disk detaylari",
+      "intent": "disk_info"
+    },
+    {
+      "text": "depolama performansi",
+      "intent": "disk_info"
+    },
+    {
+      "text": "disk okuma hizi",
+      "intent": "disk_info"
+    },
+    {
+      "text": "disk yazma hizi",
+      "intent": "disk_info"
+    },
+    {
+      "text": "suruculer hakkinda bilgi",
+      "intent": "disk_info"
+    },
+    {
+      "text": "disk alan raporu",
+      "intent": "disk_info"
+    },
+    {
+      "text": "pil durumu",
+      "intent": "battery_info"
+    },
+    {
+      "text": "batarya ne kadar",
+      "intent": "battery_info"
+    },
+    {
+      "text": "sarj yuzde kac",
+      "intent": "battery_info"
+    },
+    {
+      "text": "pil bilgisi",
+      "intent": "battery_info"
+    },
+    {
+      "text": "sarj durumu",
+      "intent": "battery_info"
+    },
+    {
+      "text": "batarya sagligi",
+      "intent": "battery_info"
+    },
+    {
+      "text": "pil ne kadar kaldi",
+      "intent": "battery_info"
+    },
+    {
+      "text": "sarjda mi",
+      "intent": "battery_info"
+    },
+    {
+      "text": "pil yuzde kac",
+      "intent": "battery_info"
+    },
+    {
+      "text": "batarya seviyesi",
+      "intent": "battery_info"
+    },
+    {
+      "text": "pil omru",
+      "intent": "battery_info"
+    },
+    {
+      "text": "ne kadar sureli pil var",
+      "intent": "battery_info"
+    },
+    {
+      "text": "sarj suresi ne kadar",
+      "intent": "battery_info"
+    },
+    {
+      "text": "pil tasarruf modu",
+      "intent": "battery_info"
+    },
+    {
+      "text": "batarya raporu",
+      "intent": "battery_info"
+    },
+    {
+      "text": "pil doluluk orani",
+      "intent": "battery_info"
+    },
+    {
+      "text": "batarya detaylari",
+      "intent": "battery_info"
+    },
+    {
+      "text": "pil saglikli mi",
+      "intent": "battery_info"
+    },
+    {
+      "text": "ne zaman dolar pil",
+      "intent": "battery_info"
+    },
+    {
+      "text": "sarj yuzdesi",
+      "intent": "battery_info"
+    },
+    {
+      "text": "ag durumu",
+      "intent": "network_info"
+    },
+    {
+      "text": "internet baglantisi",
+      "intent": "network_info"
+    },
+    {
+      "text": "wifi durumu",
+      "intent": "network_info"
+    },
+    {
+      "text": "internet hizi",
+      "intent": "network_info"
+    },
+    {
+      "text": "ag bilgisi",
+      "intent": "network_info"
+    },
+    {
+      "text": "baglanti var mi",
+      "intent": "network_info"
+    },
+    {
+      "text": "internet calisiyor mu",
+      "intent": "network_info"
+    },
+    {
+      "text": "wifi sinyal gucu",
+      "intent": "network_info"
+    },
+    {
+      "text": "ag performansi",
+      "intent": "network_info"
+    },
+    {
+      "text": "indirme hizi",
+      "intent": "network_info"
+    },
+    {
+      "text": "yukleme hizi",
+      "intent": "network_info"
+    },
+    {
+      "text": "ping degeri",
+      "intent": "network_info"
+    },
+    {
+      "text": "internet kesintisi var mi",
+      "intent": "network_info"
+    },
+    {
+      "text": "ag detaylari",
+      "intent": "network_info"
+    },
+    {
+      "text": "ip adresim ne",
+      "intent": "network_info"
+    },
+    {
+      "text": "baglanti hizi",
+      "intent": "network_info"
+    },
+    {
+      "text": "ethernet durumu",
+      "intent": "network_info"
+    },
+    {
+      "text": "wifi sifresini goster",
+      "intent": "network_info"
+    },
+    {
+      "text": "ag istatistikleri",
+      "intent": "network_info"
+    },
+    {
+      "text": "internet kullanimi",
+      "intent": "network_info"
+    },
+    {
+      "text": "veri kullanimi",
+      "intent": "network_info"
+    },
+    {
+      "text": "surecleri goster",
+      "intent": "process_list"
+    },
+    {
+      "text": "calisan programlar",
+      "intent": "process_list"
+    },
+    {
+      "text": "aktif uygulamalar",
+      "intent": "process_list"
+    },
+    {
+      "text": "surec listesi",
+      "intent": "process_list"
+    },
+    {
+      "text": "neler calisiyor",
+      "intent": "process_list"
+    },
+    {
+      "text": "gorev yoneticisi",
+      "intent": "process_list"
+    },
+    {
+      "text": "calisanlari listele",
+      "intent": "process_list"
+    },
+    {
+      "text": "top surecler",
+      "intent": "process_list"
+    },
+    {
+      "text": "en cok cpu kullanan",
+      "intent": "process_list"
+    },
+    {
+      "text": "en cok ram kullanan surec",
+      "intent": "process_list"
+    },
+    {
+      "text": "arka plan surecleri",
+      "intent": "process_list"
+    },
+    {
+      "text": "calisan servisleri goster",
+      "intent": "process_list"
+    },
+    {
+      "text": "aktif gorevler",
+      "intent": "process_list"
+    },
+    {
+      "text": "hangi programlar acik",
+      "intent": "process_list"
+    },
+    {
+      "text": "calisan uygulamalar listesi",
+      "intent": "process_list"
+    },
+    {
+      "text": "surec durumu",
+      "intent": "process_list"
+    },
+    {
+      "text": "process list",
+      "intent": "process_list"
+    },
+    {
+      "text": "gorevleri goster",
+      "intent": "process_list"
+    },
+    {
+      "text": "calisan yazilimlari listele",
+      "intent": "process_list"
+    },
+    {
+      "text": "sistem surecleri",
+      "intent": "process_list"
+    },
+    {
+      "text": "sureci sonlandir",
+      "intent": "process_kill"
+    },
+    {
+      "text": "programi kapat",
+      "intent": "process_kill"
+    },
+    {
+      "text": "uygulamayi durdur",
+      "intent": "process_kill"
+    },
+    {
+      "text": "sureci oldur",
+      "intent": "process_kill"
+    },
+    {
+      "text": "gorev sonlandir",
+      "intent": "process_kill"
+    },
+    {
+      "text": "programi bitir",
+      "intent": "process_kill"
+    },
+    {
+      "text": "zorla kapat",
+      "intent": "process_kill"
+    },
+    {
+      "text": "calismayi durdur",
+      "intent": "process_kill"
+    },
+    {
+      "text": "sureci kapat",
+      "intent": "process_kill"
+    },
+    {
+      "text": "kill process",
+      "intent": "process_kill"
+    },
+    {
+      "text": "end task",
+      "intent": "process_kill"
+    },
+    {
+      "text": "programi zorla kapat",
+      "intent": "process_kill"
+    },
+    {
+      "text": "donan programi kapat",
+      "intent": "process_kill"
+    },
+    {
+      "text": "yanit vermeyen uygulamayi kapat",
+      "intent": "process_kill"
+    },
+    {
+      "text": "cokmus programi sonlandir",
+      "intent": "process_kill"
+    },
+    {
+      "text": "gorev iptal et",
+      "intent": "process_kill"
+    },
+    {
+      "text": "islem durdur",
+      "intent": "process_kill"
+    },
+    {
+      "text": "programi sonlandir",
+      "intent": "process_kill"
+    },
+    {
+      "text": "temizle",
+      "intent": "clean_system"
+    },
+    {
+      "text": "temizlik yap",
+      "intent": "clean_system"
+    },
+    {
+      "text": "cache sil",
+      "intent": "clean_system"
+    },
+    {
+      "text": "gecici dosyalari temizle",
+      "intent": "clean_system"
+    },
+    {
+      "text": "temp dosyalari sil",
+      "intent": "clean_system"
+    },
+    {
+      "text": "sistemi temizle",
+      "intent": "clean_system"
+    },
+    {
+      "text": "disk temizligi",
+      "intent": "clean_system"
+    },
+    {
+      "text": "gereksiz dosyalari sil",
+      "intent": "clean_system"
+    },
+    {
+      "text": "cop kutusunu bosalt",
+      "intent": "clean_system"
+    },
+    {
+      "text": "tarayici onbellegi sil",
+      "intent": "clean_system"
+    },
+    {
+      "text": "log dosyalarini temizle",
+      "intent": "clean_system"
+    },
+    {
+      "text": "eski dosyalari sil",
+      "intent": "clean_system"
+    },
+    {
+      "text": "temizlik modu",
+      "intent": "clean_system"
+    },
+    {
+      "text": "sistem temizligi baslat",
+      "intent": "clean_system"
+    },
+    {
+      "text": "depolama temizle",
+      "intent": "clean_system"
+    },
+    {
+      "text": "alan ac",
+      "intent": "clean_system"
+    },
+    {
+      "text": "yer ac",
+      "intent": "clean_system"
+    },
+    {
+      "text": "gereksizleri kaldir",
+      "intent": "clean_system"
+    },
+    {
+      "text": "dosya temizligi yap",
+      "intent": "clean_system"
+    },
+    {
+      "text": "bilgisayari temizle",
+      "intent": "clean_system"
+    },
+    {
+      "text": "derin temizlik",
+      "intent": "clean_system"
+    },
+    {
+      "text": "optimize et",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "sistemi hizlandir",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "performansi artir",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "bilgisayari hizlandir",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "optimizasyon yap",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "sistemi iyilestir",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "hiz artir",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "performans artir",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "kaynaklari optimize et",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "bellek optimize et",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "disk optimize et",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "sistemi guclendir",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "hizlandirma yap",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "performans moduna gec",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "turbo mod",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "bilgisayar yavas optimize et",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "sistem optimizasyonu",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "kaynak yonetimi",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "ram temizle",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "cpu hafiflet",
+      "intent": "optimize_system"
+    },
+    {
+      "text": "baslangic programlarini yonet",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "startup uygulamalar",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "otomatik baslayan programlar",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "baslangicta calisanlari goster",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "startup devre disi birak",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "baslangic programi ekle",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "baslangic programi kaldir",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "otomatik acilan uygulamalar",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "bilgisayar acilisinda calisanlar",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "startup yonetimi",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "acilista calisan servisleri goster",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "otomatik baslatmayi kapat",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "startup optimizasyonu",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "acilis hizini artir",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "gereksiz startup programlari kapat",
+      "intent": "startup_manage"
+    },
+    {
+      "text": "oyun moduna gec",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "gaming modu",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "oyun profili",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "oyun modu ac",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "gaming profili aktif et",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "oyun performans modu",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "oyun icin optimize et",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "fps artir",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "oyun ayarlari",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "gaming mode",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "oyun optimize",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "oyun modunu aktif et",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "yuksek performans oyun modu",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "oyun icin hizlandir",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "oyun baslatma modu",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "oyun performansi artir",
+      "intent": "gaming_mode"
+    },
+    {
+      "text": "is moduna gec",
+      "intent": "work_mode"
+    },
+    {
+      "text": "calisma modu",
+      "intent": "work_mode"
+    },
+    {
+      "text": "is profili",
+      "intent": "work_mode"
+    },
+    {
+      "text": "ofis modu",
+      "intent": "work_mode"
+    },
+    {
+      "text": "uretkenlik modu",
+      "intent": "work_mode"
+    },
+    {
+      "text": "calisma profili aktif et",
+      "intent": "work_mode"
+    },
+    {
+      "text": "is icin optimize et",
+      "intent": "work_mode"
+    },
+    {
+      "text": "work mode",
+      "intent": "work_mode"
+    },
+    {
+      "text": "profesyonel mod",
+      "intent": "work_mode"
+    },
+    {
+      "text": "verimlilik modu",
+      "intent": "work_mode"
+    },
+    {
+      "text": "is modu ac",
+      "intent": "work_mode"
+    },
+    {
+      "text": "calisma ayarlari",
+      "intent": "work_mode"
+    },
+    {
+      "text": "ofis performans modu",
+      "intent": "work_mode"
+    },
+    {
+      "text": "kurumsal profil",
+      "intent": "work_mode"
+    },
+    {
+      "text": "tasarruf modu",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "enerji tasarrufu",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "pil tasarrufu",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "guc tasarrufu",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "dusuk guc modu",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "batarya tasarrufu",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "enerji tasarruf modunu ac",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "power saver",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "pil koruma modu",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "sari isigi ac",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "enerjiyi koru",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "pil omrunu uzat",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "tasarruf moduna gec",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "dusuk performans modu",
+      "intent": "power_saver_mode"
+    },
+    {
+      "text": "dengeli mod",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "normal mod",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "standart mod",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "varsayilan profil",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "balanced mode",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "orta performans",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "dengeli profil",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "normal ayarlara don",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "standart profili yukle",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "dengeli moda gec",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "normal performans",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "default profil",
+      "intent": "balanced_mode"
+    },
+    {
+      "text": "gece modu",
+      "intent": "night_mode"
+    },
+    {
+      "text": "karanlik mod",
+      "intent": "night_mode"
+    },
+    {
+      "text": "gece isigi",
+      "intent": "night_mode"
+    },
+    {
+      "text": "mavi isik filtresi",
+      "intent": "night_mode"
+    },
+    {
+      "text": "gece gorunumu",
+      "intent": "night_mode"
+    },
+    {
+      "text": "dark mode",
+      "intent": "night_mode"
+    },
+    {
+      "text": "karartma modu",
+      "intent": "night_mode"
+    },
+    {
+      "text": "gece profili",
+      "intent": "night_mode"
+    },
+    {
+      "text": "goz koruma modu",
+      "intent": "night_mode"
+    },
+    {
+      "text": "gece renk sicakligi",
+      "intent": "night_mode"
+    },
+    {
+      "text": "mavi isik azalt",
+      "intent": "night_mode"
+    },
+    {
+      "text": "gece ekrani",
+      "intent": "night_mode"
+    },
+    {
+      "text": "word belgesi olustur",
+      "intent": "create_document"
+    },
+    {
+      "text": "belge hazirla",
+      "intent": "create_document"
+    },
+    {
+      "text": "dokuman yaz",
+      "intent": "create_document"
+    },
+    {
+      "text": "rapor olustur",
+      "intent": "create_document"
+    },
+    {
+      "text": "word dosyasi yap",
+      "intent": "create_document"
+    },
+    {
+      "text": "metin belgesi hazirla",
+      "intent": "create_document"
+    },
+    {
+      "text": "yazi yaz",
+      "intent": "create_document"
+    },
+    {
+      "text": "makale olustur",
+      "intent": "create_document"
+    },
+    {
+      "text": "belge yap",
+      "intent": "create_document"
+    },
+    {
+      "text": "word ac yeni belge",
+      "intent": "create_document"
+    },
+    {
+      "text": "rapor yaz",
+      "intent": "create_document"
+    },
+    {
+      "text": "dokuman hazirla",
+      "intent": "create_document"
+    },
+    {
+      "text": "resmi yazi olustur",
+      "intent": "create_document"
+    },
+    {
+      "text": "ozgecmis hazirla",
+      "intent": "create_document"
+    },
+    {
+      "text": "cv yaz",
+      "intent": "create_document"
+    },
+    {
+      "text": "word belgesi hazirla",
+      "intent": "create_document"
+    },
+    {
+      "text": "yeni dokuman olustur",
+      "intent": "create_document"
+    },
+    {
+      "text": "metin dosyasi olustur",
+      "intent": "create_document"
+    },
+    {
+      "text": "yazi belgesi hazirla",
+      "intent": "create_document"
+    },
+    {
+      "text": "word'de belge yap",
+      "intent": "create_document"
+    },
+    {
+      "text": "belge tasarla",
+      "intent": "create_document"
+    },
+    {
+      "text": "mektup yaz",
+      "intent": "create_document"
+    },
+    {
+      "text": "dilekce hazirla",
+      "intent": "create_document"
+    },
+    {
+      "text": "sozlesme olustur",
+      "intent": "create_document"
+    },
+    {
+      "text": "tutanak hazirla",
+      "intent": "create_document"
+    },
+    {
+      "text": "karar yazisi yaz",
+      "intent": "create_document"
+    },
+    {
+      "text": "excel tablosu olustur",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "tablo yap",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "hesap cizelgesi hazirla",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "excel dosyasi olustur",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "veri tablosu yap",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "spreadsheet hazirla",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "excel ac yeni tablo",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "mali tablo olustur",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "butce tablosu yap",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "excel'de tablo hazirla",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "veri girisi yap",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "hesaplama tablosu",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "satis tablosu olustur",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "envanter tablosu yap",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "stok listesi hazirla",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "fiyat listesi olustur",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "maas tablosu hazirla",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "butce plani yap",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "gelir gider tablosu",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "istatistik tablosu olustur",
+      "intent": "create_spreadsheet"
+    },
+    {
+      "text": "sunum hazirla",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "powerpoint olustur",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "slayt yap",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "prezentasyon hazirla",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "sunum dosyasi olustur",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "slayt tasarla",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "powerpoint sunumu yap",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "toplanti sunumu hazirla",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "pptx olustur",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "is sunumu hazirla",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "egitim sunumu olustur",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "tanitim sunumu yap",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "proje sunumu hazirla",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "satis sunumu olustur",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "yillik rapor sunumu",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "ders sunumu yap",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "konferans sunumu hazirla",
+      "intent": "create_presentation"
+    },
+    {
+      "text": "pdf oku",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf dosyasini ac",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf icerigini goster",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf ozetle",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf'i analiz et",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf'den metin cikar",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf dosyasini goruntule",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf icerigini oku",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf tarama",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf belgesini incele",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf'deki bilgileri cikar",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf dosyasini kontrol et",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "pdf icerik analizi",
+      "intent": "read_pdf"
+    },
+    {
+      "text": "belgeyi duzenle",
+      "intent": "edit_document"
+    },
+    {
+      "text": "dokumani guncelle",
+      "intent": "edit_document"
+    },
+    {
+      "text": "dosyayi degistir",
+      "intent": "edit_document"
+    },
+    {
+      "text": "belge uzerinde calis",
+      "intent": "edit_document"
+    },
+    {
+      "text": "dokuman revize et",
+      "intent": "edit_document"
+    },
+    {
+      "text": "metni duzenle",
+      "intent": "edit_document"
+    },
+    {
+      "text": "icerik guncelle",
+      "intent": "edit_document"
+    },
+    {
+      "text": "belgeyi edit et",
+      "intent": "edit_document"
+    },
+    {
+      "text": "yaziyi degistir",
+      "intent": "edit_document"
+    },
+    {
+      "text": "dokumani aç ve duzenle",
+      "intent": "edit_document"
+    },
+    {
+      "text": "belge icerigini degistir",
+      "intent": "edit_document"
+    },
+    {
+      "text": "dosyada degisiklik yap",
+      "intent": "edit_document"
+    },
+    {
+      "text": "metni guncelle",
+      "intent": "edit_document"
+    },
+    {
+      "text": "yazdir",
+      "intent": "print_document"
+    },
+    {
+      "text": "belgeyi yazdir",
+      "intent": "print_document"
+    },
+    {
+      "text": "cikti al",
+      "intent": "print_document"
+    },
+    {
+      "text": "sayfayi yazdir",
+      "intent": "print_document"
+    },
+    {
+      "text": "printer'a gonder",
+      "intent": "print_document"
+    },
+    {
+      "text": "baskiya gonder",
+      "intent": "print_document"
+    },
+    {
+      "text": "print et",
+      "intent": "print_document"
+    },
+    {
+      "text": "dokuman yazdir",
+      "intent": "print_document"
+    },
+    {
+      "text": "sayfa ciktisi al",
+      "intent": "print_document"
+    },
+    {
+      "text": "yazicidan cikart",
+      "intent": "print_document"
+    },
+    {
+      "text": "belgeyi bastir",
+      "intent": "print_document"
+    },
+    {
+      "text": "yazici ile cikti al",
+      "intent": "print_document"
+    },
+    {
+      "text": "kopya cikart",
+      "intent": "print_document"
+    },
+    {
+      "text": "dosya ara",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosya bul",
+      "intent": "file_search"
+    },
+    {
+      "text": "belge ara",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosya tara",
+      "intent": "file_search"
+    },
+    {
+      "text": "aradigim dosya",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosya nerede",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosyayi bul",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosya konumu",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosyayi ara",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosya arama yap",
+      "intent": "file_search"
+    },
+    {
+      "text": "bilgisayarda dosya ara",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosyalari tara",
+      "intent": "file_search"
+    },
+    {
+      "text": "belge bul",
+      "intent": "file_search"
+    },
+    {
+      "text": "kayip dosyayi bul",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosya arastir",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosya ismi ile ara",
+      "intent": "file_search"
+    },
+    {
+      "text": "uzantiya gore dosya ara",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosyalari filtrele",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosya konumunu bul",
+      "intent": "file_search"
+    },
+    {
+      "text": "masaustunde dosya ara",
+      "intent": "file_search"
+    },
+    {
+      "text": "dosyalari duzenle",
+      "intent": "file_organize"
+    },
+    {
+      "text": "dosyalari sirala",
+      "intent": "file_organize"
+    },
+    {
+      "text": "dosyalari organize et",
+      "intent": "file_organize"
+    },
+    {
+      "text": "masaustunu duzenle",
+      "intent": "file_organize"
+    },
+    {
+      "text": "dosyalari kategorize et",
+      "intent": "file_organize"
+    },
+    {
+      "text": "dosya duzenleme",
+      "intent": "file_organize"
+    },
+    {
+      "text": "dosyalari tarihine gore sirala",
+      "intent": "file_organize"
+    },
+    {
+      "text": "dosyalari boyutuna gore sirala",
+      "intent": "file_organize"
+    },
+    {
+      "text": "dosyalari turune gore ayir",
+      "intent": "file_organize"
+    },
+    {
+      "text": "klasorlere ayir",
+      "intent": "file_organize"
+    },
+    {
+      "text": "dosyalari gruplandi",
+      "intent": "file_organize"
+    },
+    {
+      "text": "masaustu temizle",
+      "intent": "file_organize"
+    },
+    {
+      "text": "indirilenler klasorunu duzenle",
+      "intent": "file_organize"
+    },
+    {
+      "text": "dosya organizasyonu yap",
+      "intent": "file_organize"
+    },
+    {
+      "text": "otomatik dosya duzenleme",
+      "intent": "file_organize"
+    },
+    {
+      "text": "dosyalari isimlendirerek sirala",
+      "intent": "file_organize"
+    },
+    {
+      "text": "dosya bilgisi",
+      "intent": "file_info"
+    },
+    {
+      "text": "dosya boyutu",
+      "intent": "file_info"
+    },
+    {
+      "text": "buyuk dosyalar",
+      "intent": "file_info"
+    },
+    {
+      "text": "dosya detaylari",
+      "intent": "file_info"
+    },
+    {
+      "text": "dosya ozellikleri",
+      "intent": "file_info"
+    },
+    {
+      "text": "dosya tarihi",
+      "intent": "file_info"
+    },
+    {
+      "text": "dosyanin boyutunu goster",
+      "intent": "file_info"
+    },
+    {
+      "text": "en buyuk dosyalar",
+      "intent": "file_info"
+    },
+    {
+      "text": "dosya istatistikleri",
+      "intent": "file_info"
+    },
+    {
+      "text": "dosya meta bilgisi",
+      "intent": "file_info"
+    },
+    {
+      "text": "dosya boyut raporu",
+      "intent": "file_info"
+    },
+    {
+      "text": "alan kullanan dosyalar",
+      "intent": "file_info"
+    },
+    {
+      "text": "agir dosyalari bul",
+      "intent": "file_info"
+    },
+    {
+      "text": "dosya turlerini goster",
+      "intent": "file_info"
+    },
+    {
+      "text": "dosya sayisi",
+      "intent": "file_info"
+    },
+    {
+      "text": "klasor boyutu",
+      "intent": "file_info"
+    },
+    {
+      "text": "dosya sil",
+      "intent": "file_delete"
+    },
+    {
+      "text": "dosyayi kaldir",
+      "intent": "file_delete"
+    },
+    {
+      "text": "gereksiz dosyalari sil",
+      "intent": "file_delete"
+    },
+    {
+      "text": "eski dosyalari temizle",
+      "intent": "file_delete"
+    },
+    {
+      "text": "dosyayi cop kutusuna at",
+      "intent": "file_delete"
+    },
+    {
+      "text": "dosya silme",
+      "intent": "file_delete"
+    },
+    {
+      "text": "belgeyi sil",
+      "intent": "file_delete"
+    },
+    {
+      "text": "dosyayi at",
+      "intent": "file_delete"
+    },
+    {
+      "text": "dosyayi kalici olarak sil",
+      "intent": "file_delete"
+    },
+    {
+      "text": "dosya cikar",
+      "intent": "file_delete"
+    },
+    {
+      "text": "gereksiz belgeleri sil",
+      "intent": "file_delete"
+    },
+    {
+      "text": "eski kayitlari temizle",
+      "intent": "file_delete"
+    },
+    {
+      "text": "dosya kopyala",
+      "intent": "file_copy"
+    },
+    {
+      "text": "dosyayi kopyala",
+      "intent": "file_copy"
+    },
+    {
+      "text": "belge kopyala",
+      "intent": "file_copy"
+    },
+    {
+      "text": "dosyayi baska yere kopyala",
+      "intent": "file_copy"
+    },
+    {
+      "text": "dosya cogalt",
+      "intent": "file_copy"
+    },
+    {
+      "text": "kopyasini olustur",
+      "intent": "file_copy"
+    },
+    {
+      "text": "yedek kopyala",
+      "intent": "file_copy"
+    },
+    {
+      "text": "dosya yedekle",
+      "intent": "file_copy"
+    },
+    {
+      "text": "klasor kopyala",
+      "intent": "file_copy"
+    },
+    {
+      "text": "dizin kopyala",
+      "intent": "file_copy"
+    },
+    {
+      "text": "dosyayi cokla",
+      "intent": "file_copy"
+    },
+    {
+      "text": "dosya tasi",
+      "intent": "file_move"
+    },
+    {
+      "text": "dosyayi tasi",
+      "intent": "file_move"
+    },
+    {
+      "text": "belgeyi tasi",
+      "intent": "file_move"
+    },
+    {
+      "text": "dosyayi baska klasore tasi",
+      "intent": "file_move"
+    },
+    {
+      "text": "dosya tasima",
+      "intent": "file_move"
+    },
+    {
+      "text": "dosyayi yeni konuma tasi",
+      "intent": "file_move"
+    },
+    {
+      "text": "dosyayi aktar",
+      "intent": "file_move"
+    },
+    {
+      "text": "klasor tasi",
+      "intent": "file_move"
+    },
+    {
+      "text": "dosya yer degistir",
+      "intent": "file_move"
+    },
+    {
+      "text": "dosyayi surukle",
+      "intent": "file_move"
+    },
+    {
+      "text": "dosya adini degistir",
+      "intent": "file_rename"
+    },
+    {
+      "text": "dosyayi yeniden adlandir",
+      "intent": "file_rename"
+    },
+    {
+      "text": "dosya isim degisikligi",
+      "intent": "file_rename"
+    },
+    {
+      "text": "rename dosya",
+      "intent": "file_rename"
+    },
+    {
+      "text": "dosyayi yeniden isimlendir",
+      "intent": "file_rename"
+    },
+    {
+      "text": "dosya adi guncelle",
+      "intent": "file_rename"
+    },
+    {
+      "text": "toplu isim degistir",
+      "intent": "file_rename"
+    },
+    {
+      "text": "dosya adini duzenle",
+      "intent": "file_rename"
+    },
+    {
+      "text": "dosya sikistir",
+      "intent": "file_compress"
+    },
+    {
+      "text": "zip yap",
+      "intent": "file_compress"
+    },
+    {
+      "text": "rar olustur",
+      "intent": "file_compress"
+    },
+    {
+      "text": "dosya arsivle",
+      "intent": "file_compress"
+    },
+    {
+      "text": "sikistirmis dosya olustur",
+      "intent": "file_compress"
+    },
+    {
+      "text": "zip dosyasi yap",
+      "intent": "file_compress"
+    },
+    {
+      "text": "arsiv olustur",
+      "intent": "file_compress"
+    },
+    {
+      "text": "dosyalari zip'le",
+      "intent": "file_compress"
+    },
+    {
+      "text": "klasoru sikistir",
+      "intent": "file_compress"
+    },
+    {
+      "text": "dosyayi paketele",
+      "intent": "file_compress"
+    },
+    {
+      "text": "zip ac",
+      "intent": "file_extract"
+    },
+    {
+      "text": "arsivi cikar",
+      "intent": "file_extract"
+    },
+    {
+      "text": "rar ac",
+      "intent": "file_extract"
+    },
+    {
+      "text": "sikistirilmis dosyayi ac",
+      "intent": "file_extract"
+    },
+    {
+      "text": "unzip yap",
+      "intent": "file_extract"
+    },
+    {
+      "text": "arsiv cikar",
+      "intent": "file_extract"
+    },
+    {
+      "text": "zip dosyasini ac",
+      "intent": "file_extract"
+    },
+    {
+      "text": "paketlenfi dosyayi ac",
+      "intent": "file_extract"
+    },
+    {
+      "text": "rar dosyasini cikar",
+      "intent": "file_extract"
+    },
+    {
+      "text": "compressed dosyayi ac",
+      "intent": "file_extract"
+    },
+    {
+      "text": "yeni klasor olustur",
+      "intent": "folder_create"
+    },
+    {
+      "text": "klasor yap",
+      "intent": "folder_create"
+    },
+    {
+      "text": "dizin olustur",
+      "intent": "folder_create"
+    },
+    {
+      "text": "yeni dosya klasoru ac",
+      "intent": "folder_create"
+    },
+    {
+      "text": "folder olustur",
+      "intent": "folder_create"
+    },
+    {
+      "text": "yeni dizin yap",
+      "intent": "folder_create"
+    },
+    {
+      "text": "proje klasoru olustur",
+      "intent": "folder_create"
+    },
+    {
+      "text": "alt klasor yap",
+      "intent": "folder_create"
+    },
+    {
+      "text": "masaustune klasor olustur",
+      "intent": "folder_create"
+    },
+    {
+      "text": "bos klasor ac",
+      "intent": "folder_create"
+    },
+    {
+      "text": "chrome ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "firefox baslat",
+      "intent": "open_app"
+    },
+    {
+      "text": "notepad ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "word ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "excel ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "tarayici ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "hesap makinesi ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "paint ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "calculator ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "vscode ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "spotify ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "discord ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "telegram ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "steam ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "zoom ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "teams ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "uygulama ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "program baslat",
+      "intent": "open_app"
+    },
+    {
+      "text": "uygulama calistir",
+      "intent": "open_app"
+    },
+    {
+      "text": "browser ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "dosya yoneticisi ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "gorev yoneticisi ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "cmd ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "powershell ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "terminal ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "media player ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "vlc ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "muzik uygulamasini ac",
+      "intent": "open_app"
+    },
+    {
+      "text": "chrome kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "uygulamayi kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "programi kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "tarayiciyi kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "firefox kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "word kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "tum uygulamalari kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "calisanlari kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "programlari sonlandir",
+      "intent": "close_app"
+    },
+    {
+      "text": "uygulamayi zorla kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "acik pencereyi kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "tum pencereleri kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "arka plan uygulamalarini kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "gereksiz uygulamalari kapat",
+      "intent": "close_app"
+    },
+    {
+      "text": "google.com ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "youtube'u ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "web sayfasi ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "siteyi ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "url ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "link ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "twitter'i ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "instagram'i ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "github'i ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "linkedin ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "facebook ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "haber sitesini ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "mail sayfasini ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "google maps ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "alisveris sitesini ac",
+      "intent": "open_url"
+    },
+    {
+      "text": "uygulama yukle",
+      "intent": "install_app"
+    },
+    {
+      "text": "program kur",
+      "intent": "install_app"
+    },
+    {
+      "text": "yazilim indir",
+      "intent": "install_app"
+    },
+    {
+      "text": "app yukle",
+      "intent": "install_app"
+    },
+    {
+      "text": "yeni program kur",
+      "intent": "install_app"
+    },
+    {
+      "text": "uygulama indir",
+      "intent": "install_app"
+    },
+    {
+      "text": "store'dan indir",
+      "intent": "install_app"
+    },
+    {
+      "text": "market'ten yukle",
+      "intent": "install_app"
+    },
+    {
+      "text": "program indir ve kur",
+      "intent": "install_app"
+    },
+    {
+      "text": "kurulum yap",
+      "intent": "install_app"
+    },
+    {
+      "text": "google'da ara",
+      "intent": "web_search"
+    },
+    {
+      "text": "internette ara",
+      "intent": "web_search"
+    },
+    {
+      "text": "web'de arastir",
+      "intent": "web_search"
+    },
+    {
+      "text": "google'a sor",
+      "intent": "web_search"
+    },
+    {
+      "text": "internet araması yap",
+      "intent": "web_search"
+    },
+    {
+      "text": "online ara",
+      "intent": "web_search"
+    },
+    {
+      "text": "google arama",
+      "intent": "web_search"
+    },
+    {
+      "text": "web araması",
+      "intent": "web_search"
+    },
+    {
+      "text": "internetten bul",
+      "intent": "web_search"
+    },
+    {
+      "text": "arastirma yap",
+      "intent": "web_search"
+    },
+    {
+      "text": "bilgi ara",
+      "intent": "web_search"
+    },
+    {
+      "text": "google'dan bul",
+      "intent": "web_search"
+    },
+    {
+      "text": "web taramasi yap",
+      "intent": "web_search"
+    },
+    {
+      "text": "internet uzerinden ara",
+      "intent": "web_search"
+    },
+    {
+      "text": "konuyu arastir",
+      "intent": "web_search"
+    },
+    {
+      "text": "detayli arastirma yap",
+      "intent": "web_search"
+    },
+    {
+      "text": "kaynak ara",
+      "intent": "web_search"
+    },
+    {
+      "text": "bilgi topla",
+      "intent": "web_search"
+    },
+    {
+      "text": "internetten arastir",
+      "intent": "web_search"
+    },
+    {
+      "text": "google'da arama yap",
+      "intent": "web_search"
+    },
+    {
+      "text": "arama motoru kullan",
+      "intent": "web_search"
+    },
+    {
+      "text": "haberleri goster",
+      "intent": "web_news"
+    },
+    {
+      "text": "son haberler",
+      "intent": "web_news"
+    },
+    {
+      "text": "guncel haberler",
+      "intent": "web_news"
+    },
+    {
+      "text": "son dakika haberleri",
+      "intent": "web_news"
+    },
+    {
+      "text": "bugunun haberleri",
+      "intent": "web_news"
+    },
+    {
+      "text": "haber bulteni",
+      "intent": "web_news"
+    },
+    {
+      "text": "spor haberleri",
+      "intent": "web_news"
+    },
+    {
+      "text": "ekonomi haberleri",
+      "intent": "web_news"
+    },
+    {
+      "text": "dunya haberleri",
+      "intent": "web_news"
+    },
+    {
+      "text": "teknoloji haberleri",
+      "intent": "web_news"
+    },
+    {
+      "text": "turkiye haberleri",
+      "intent": "web_news"
+    },
+    {
+      "text": "sicak gelismeler",
+      "intent": "web_news"
+    },
+    {
+      "text": "gundem ne",
+      "intent": "web_news"
+    },
+    {
+      "text": "neler oluyor",
+      "intent": "web_news"
+    },
+    {
+      "text": "bugun ne oldu",
+      "intent": "web_news"
+    },
+    {
+      "text": "hava durumu",
+      "intent": "web_weather"
+    },
+    {
+      "text": "hava nasil",
+      "intent": "web_weather"
+    },
+    {
+      "text": "bugun hava nasil",
+      "intent": "web_weather"
+    },
+    {
+      "text": "yarin hava durumu",
+      "intent": "web_weather"
+    },
+    {
+      "text": "haftalik hava durumu",
+      "intent": "web_weather"
+    },
+    {
+      "text": "sicaklik kac derece",
+      "intent": "web_weather"
+    },
+    {
+      "text": "yagmur yagacak mi",
+      "intent": "web_weather"
+    },
+    {
+      "text": "hava tahmini",
+      "intent": "web_weather"
+    },
+    {
+      "text": "meteoroloji",
+      "intent": "web_weather"
+    },
+    {
+      "text": "hava durumunu goster",
+      "intent": "web_weather"
+    },
+    {
+      "text": "disarisi nasil",
+      "intent": "web_weather"
+    },
+    {
+      "text": "kar yagacak mi",
+      "intent": "web_weather"
+    },
+    {
+      "text": "ruzgar hizi",
+      "intent": "web_weather"
+    },
+    {
+      "text": "nem orani",
+      "intent": "web_weather"
+    },
+    {
+      "text": "istanbul hava durumu",
+      "intent": "web_weather"
+    },
+    {
+      "text": "ankara hava durumu",
+      "intent": "web_weather"
+    },
+    {
+      "text": "hava sicakligi",
+      "intent": "web_weather"
+    },
+    {
+      "text": "dosya indir",
+      "intent": "web_download"
+    },
+    {
+      "text": "internetten indir",
+      "intent": "web_download"
+    },
+    {
+      "text": "sayfa indir",
+      "intent": "web_download"
+    },
+    {
+      "text": "video indir",
+      "intent": "web_download"
+    },
+    {
+      "text": "resim indir",
+      "intent": "web_download"
+    },
+    {
+      "text": "muzik indir",
+      "intent": "web_download"
+    },
+    {
+      "text": "pdf indir",
+      "intent": "web_download"
+    },
+    {
+      "text": "program indir",
+      "intent": "web_download"
+    },
+    {
+      "text": "dosya cek",
+      "intent": "web_download"
+    },
+    {
+      "text": "indirme baslat",
+      "intent": "web_download"
+    },
+    {
+      "text": "download yap",
+      "intent": "web_download"
+    },
+    {
+      "text": "icerik indir",
+      "intent": "web_download"
+    },
+    {
+      "text": "whatsapp'tan mesaj gonder",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp mesaj at",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp'tan yaz",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp ile mesaj gonder",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp mesaj yolla",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "wp mesaj at",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp'tan mesaj yolla",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "wp'den yaz",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp uzerinden mesaj at",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp ilet",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp'ta mesaj gonder",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "wp gonder",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp bildirim gonder",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp mesajlasma",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp'tan haber ver",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "wp mesaj gonder",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp ile iletisim kur",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp yazisma",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp'tan bilgi gonder",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "wp'den mesaj at",
+      "intent": "whatsapp_send"
+    },
+    {
+      "text": "whatsapp mesajlarini oku",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "whatsapp bildirimler",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "whatsapp gelen mesajlar",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "wp mesajlari goster",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "whatsapp'taki mesajlari kontrol et",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "whatsapp okunmamislar",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "wp mesajlarimi oku",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "whatsapp son mesajlar",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "whatsapp mesaj kutusunu ac",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "wp bildirimleri goster",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "whatsapp'ta ne var",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "gelen whatsapp mesajlari",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "wp'deki mesajlari goruntule",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "whatsapp kontrol et",
+      "intent": "whatsapp_read"
+    },
+    {
+      "text": "whatsapp'tan ara",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "whatsapp arama yap",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "wp ile ara",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "whatsapp sesli arama",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "whatsapp goruntulu arama",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "wp goruntulu ara",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "whatsapp'tan telefon et",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "whatsapp video arama",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "wp sesli gorushme",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "whatsapp ile konusma baslat",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "wp arama yap",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "whatsapp gorushme baslat",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "whatsapp ile iletisime gec",
+      "intent": "whatsapp_call"
+    },
+    {
+      "text": "whatsapp grup olustur",
+      "intent": "whatsapp_group"
+    },
+    {
+      "text": "whatsapp grubuna mesaj at",
+      "intent": "whatsapp_group"
+    },
+    {
+      "text": "wp grup yaz",
+      "intent": "whatsapp_group"
+    },
+    {
+      "text": "whatsapp grup kurr",
+      "intent": "whatsapp_group"
+    },
+    {
+      "text": "whatsapp grubuma mesaj gonder",
+      "intent": "whatsapp_group"
+    },
+    {
+      "text": "wp gruba yaz",
+      "intent": "whatsapp_group"
+    },
+    {
+      "text": "whatsapp toplu mesaj",
+      "intent": "whatsapp_group"
+    },
+    {
+      "text": "whatsapp gruplara bildirim",
+      "intent": "whatsapp_group"
+    },
+    {
+      "text": "wp grup mesaji at",
+      "intent": "whatsapp_group"
+    },
+    {
+      "text": "whatsapp grubunda paylas",
+      "intent": "whatsapp_group"
+    },
+    {
+      "text": "whatsapp'tan foto gonder",
+      "intent": "whatsapp_media"
+    },
+    {
+      "text": "whatsapp resim at",
+      "intent": "whatsapp_media"
+    },
+    {
+      "text": "wp video gonder",
+      "intent": "whatsapp_media"
+    },
+    {
+      "text": "whatsapp dosya paylas",
+      "intent": "whatsapp_media"
+    },
+    {
+      "text": "whatsapp ses kaydi gonder",
+      "intent": "whatsapp_media"
+    },
+    {
+      "text": "wp belge gonder",
+      "intent": "whatsapp_media"
+    },
+    {
+      "text": "whatsapp'tan konum paylas",
+      "intent": "whatsapp_media"
+    },
+    {
+      "text": "wp fotograf at",
+      "intent": "whatsapp_media"
+    },
+    {
+      "text": "whatsapp dokuman gonder",
+      "intent": "whatsapp_media"
+    },
+    {
+      "text": "whatsapp medya paylas",
+      "intent": "whatsapp_media"
+    },
+    {
+      "text": "mail gonder",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "e-posta gonder",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "email at",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "gmail'den mail gonder",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "mail yolla",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "e-posta yolla",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "mail at",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "email gonder",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "gmail ile gonder",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "elektronik posta gonder",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "gmail uzerinden mail at",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "mail ilet",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "e-posta postalat",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "gmail'dan yaz",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "is maili gonder",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "resmi email gonder",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "mail yaz ve gonder",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "eposta at",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "gmail mesaj gonder",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "mail hazirla ve gonder",
+      "intent": "gmail_send"
+    },
+    {
+      "text": "mailleri oku",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "gelen kutusunu kontrol et",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "e-postalari goster",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "gmail aç",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "gelen mailler",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "yeni mail var mi",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "mail kutusunu kontrol et",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "e-postalari oku",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "gmail'i kontrol et",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "okunmamis mailler",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "gelen e-postalar",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "gmail bildirimler",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "son gelen mailler",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "mail kutusuna bak",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "mail kutusundakileri goster",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "e-posta bildirimleri",
+      "intent": "gmail_read"
+    },
+    {
+      "text": "maile cevap yaz",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "e-postaya yanit ver",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "mail cevapla",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "gelen maile don",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "email'e cevap yaz",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "gmail cevapla",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "maile yanit gonder",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "e-postaya cevap at",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "mail cevap ver",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "reply yaz",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "geri donus yap maile",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "maile geri yaz",
+      "intent": "gmail_reply"
+    },
+    {
+      "text": "maili ilet",
+      "intent": "gmail_forward"
+    },
+    {
+      "text": "e-postayi yonlendir",
+      "intent": "gmail_forward"
+    },
+    {
+      "text": "mail forward et",
+      "intent": "gmail_forward"
+    },
+    {
+      "text": "maili baskasina gonder",
+      "intent": "gmail_forward"
+    },
+    {
+      "text": "e-postayi aktar",
+      "intent": "gmail_forward"
+    },
+    {
+      "text": "maili paylas",
+      "intent": "gmail_forward"
+    },
+    {
+      "text": "forward mail",
+      "intent": "gmail_forward"
+    },
+    {
+      "text": "maili yonlendir",
+      "intent": "gmail_forward"
+    },
+    {
+      "text": "e-postayi ilet",
+      "intent": "gmail_forward"
+    },
+    {
+      "text": "mail taslagi hazirla",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "e-posta taslagi olustur",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "mail taslak kaydet",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "gmail taslak yaz",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "resmi mail taslagi hazirla",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "is maili taslagi olustur",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "e-posta sablonu hazirla",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "mail formati olustur",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "mail icerigi hazirla",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "mail metni yaz",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "profesyonel mail yaz",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "resmi e-posta hazirla",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "kurumsal mail taslagi",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "basvuru maili hazirla",
+      "intent": "gmail_draft"
+    },
+    {
+      "text": "mail ara",
+      "intent": "gmail_search"
+    },
+    {
+      "text": "e-postada ara",
+      "intent": "gmail_search"
+    },
+    {
+      "text": "gmail'de ara",
+      "intent": "gmail_search"
+    },
+    {
+      "text": "eski mailleri bul",
+      "intent": "gmail_search"
+    },
+    {
+      "text": "mail arama yap",
+      "intent": "gmail_search"
+    },
+    {
+      "text": "e-posta filtrele",
+      "intent": "gmail_search"
+    },
+    {
+      "text": "belirli maili bul",
+      "intent": "gmail_search"
+    },
+    {
+      "text": "gmail arama",
+      "intent": "gmail_search"
+    },
+    {
+      "text": "mail ic araması",
+      "intent": "gmail_search"
+    },
+    {
+      "text": "gonderdiklerimi ara",
+      "intent": "gmail_search"
+    },
+    {
+      "text": "gelen kutusunda ara",
+      "intent": "gmail_search"
+    },
+    {
+      "text": "mesaj yaz",
+      "intent": "write_message"
+    },
+    {
+      "text": "cevap hazirla",
+      "intent": "write_message"
+    },
+    {
+      "text": "mesaj hazirla",
+      "intent": "write_message"
+    },
+    {
+      "text": "kisa mesaj yaz",
+      "intent": "write_message"
+    },
+    {
+      "text": "metin hazirla",
+      "intent": "write_message"
+    },
+    {
+      "text": "yazi yaz",
+      "intent": "write_message"
+    },
+    {
+      "text": "mesaj olustur",
+      "intent": "write_message"
+    },
+    {
+      "text": "iletisim metni yaz",
+      "intent": "write_message"
+    },
+    {
+      "text": "bilgilendirme mesaji yaz",
+      "intent": "write_message"
+    },
+    {
+      "text": "resmi mesaj hazirla",
+      "intent": "write_message"
+    },
+    {
+      "text": "samimi mesaj yaz",
+      "intent": "write_message"
+    },
+    {
+      "text": "tebrik mesaji yaz",
+      "intent": "write_message"
+    },
+    {
+      "text": "davet mesaji olustur",
+      "intent": "write_message"
+    },
+    {
+      "text": "bildirim mesaji hazirla",
+      "intent": "write_message"
+    },
+    {
+      "text": "duyuru metni yaz",
+      "intent": "write_message"
+    },
+    {
+      "text": "mesaj tasarla",
+      "intent": "write_message"
+    },
+    {
+      "text": "mektup yaz",
+      "intent": "write_letter"
+    },
+    {
+      "text": "dilekce hziala",
+      "intent": "write_letter"
+    },
+    {
+      "text": "resmi yazi hazirla",
+      "intent": "write_letter"
+    },
+    {
+      "text": "basvuru mektubu yaz",
+      "intent": "write_letter"
+    },
+    {
+      "text": "onay yazisi hazirla",
+      "intent": "write_letter"
+    },
+    {
+      "text": "talep yazisi olustur",
+      "intent": "write_letter"
+    },
+    {
+      "text": "resmi dilekce yaz",
+      "intent": "write_letter"
+    },
+    {
+      "text": "istifa mektubu hazirla",
+      "intent": "write_letter"
+    },
+    {
+      "text": "referans mektubu yaz",
+      "intent": "write_letter"
+    },
+    {
+      "text": "tanitim mektubu olustur",
+      "intent": "write_letter"
+    },
+    {
+      "text": "sikayet mektubu yaz",
+      "intent": "write_letter"
+    },
+    {
+      "text": "tebrik mektubu hazirla",
+      "intent": "write_letter"
+    },
+    {
+      "text": "davet mektubu olustur",
+      "intent": "write_letter"
+    },
+    {
+      "text": "bilgilendirme yazisi",
+      "intent": "write_letter"
+    },
+    {
+      "text": "sms gonder",
+      "intent": "sms_send"
+    },
+    {
+      "text": "kisa mesaj at",
+      "intent": "sms_send"
+    },
+    {
+      "text": "telefona mesaj gonder",
+      "intent": "sms_send"
+    },
+    {
+      "text": "sms yolla",
+      "intent": "sms_send"
+    },
+    {
+      "text": "mesaj at",
+      "intent": "sms_send"
+    },
+    {
+      "text": "kisa mesaj gonder",
+      "intent": "sms_send"
+    },
+    {
+      "text": "sms mesaj at",
+      "intent": "sms_send"
+    },
+    {
+      "text": "telefon mesaji gonder",
+      "intent": "sms_send"
+    },
+    {
+      "text": "numraya mesaj at",
+      "intent": "sms_send"
+    },
+    {
+      "text": "sms ilet",
+      "intent": "sms_send"
+    },
+    {
+      "text": "acikla",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "anlat",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "nedir",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "ne demek",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "konu hakkinda bilgi ver",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "detayli acikla",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "bu konu hakkinda bilgi",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "bana anlat",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "ogretir misin",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "ne anlama geliyor",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "ne ise yarar",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "nasil calisir",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "mantigi ne",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "konuyu acikla",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "basitce anlat",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "ornekle acikla",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "ozet bilgi ver",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "kisa aciklama yap",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "tanimi ne",
+      "intent": "explain_topic"
+    },
+    {
+      "text": "tavsiye ver",
+      "intent": "give_advice"
+    },
+    {
+      "text": "ne onerirsin",
+      "intent": "give_advice"
+    },
+    {
+      "text": "oneride bulun",
+      "intent": "give_advice"
+    },
+    {
+      "text": "ne yapmami onerirsin",
+      "intent": "give_advice"
+    },
+    {
+      "text": "fikrin ne",
+      "intent": "give_advice"
+    },
+    {
+      "text": "tavsiye eder misin",
+      "intent": "give_advice"
+    },
+    {
+      "text": "ne yapmaliyim",
+      "intent": "give_advice"
+    },
+    {
+      "text": "onerilerin neler",
+      "intent": "give_advice"
+    },
+    {
+      "text": "senin dusuncen ne",
+      "intent": "give_advice"
+    },
+    {
+      "text": "yol goster",
+      "intent": "give_advice"
+    },
+    {
+      "text": "rehberlik et",
+      "intent": "give_advice"
+    },
+    {
+      "text": "danismanlik yap",
+      "intent": "give_advice"
+    },
+    {
+      "text": "en iyisi ne olur",
+      "intent": "give_advice"
+    },
+    {
+      "text": "ne tavsiye edersin",
+      "intent": "give_advice"
+    },
+    {
+      "text": "nasil daha iyi olur",
+      "intent": "give_advice"
+    },
+    {
+      "text": "ipucu ver",
+      "intent": "give_advice"
+    },
+    {
+      "text": "puf noktasi ne",
+      "intent": "give_advice"
+    },
+    {
+      "text": "trick ne",
+      "intent": "give_advice"
+    },
+    {
+      "text": "cevir",
+      "intent": "translate_text"
+    },
+    {
+      "text": "tercume et",
+      "intent": "translate_text"
+    },
+    {
+      "text": "ingilizce'ye cevir",
+      "intent": "translate_text"
+    },
+    {
+      "text": "turkce'ye cevir",
+      "intent": "translate_text"
+    },
+    {
+      "text": "translate",
+      "intent": "translate_text"
+    },
+    {
+      "text": "dil ceviri yap",
+      "intent": "translate_text"
+    },
+    {
+      "text": "bu cumleyi ingilizce yaz",
+      "intent": "translate_text"
+    },
+    {
+      "text": "almanca'ya cevir",
+      "intent": "translate_text"
+    },
+    {
+      "text": "metin cevirisi",
+      "intent": "translate_text"
+    },
+    {
+      "text": "yabanci dile cevir",
+      "intent": "translate_text"
+    },
+    {
+      "text": "ingilizce anlami ne",
+      "intent": "translate_text"
+    },
+    {
+      "text": "turkce anlami ne",
+      "intent": "translate_text"
+    },
+    {
+      "text": "sozluk bak",
+      "intent": "translate_text"
+    },
+    {
+      "text": "kelime ceviri",
+      "intent": "translate_text"
+    },
+    {
+      "text": "cumle cevirisi yap",
+      "intent": "translate_text"
+    },
+    {
+      "text": "hesapla",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "kac yapar",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "toplami ne",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "cikarma yap",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "carpma islemi",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "bolme yap",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "yuzde hesapla",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "faiz hesapla",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "kdv hesapla",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "kur cevirisi",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "birim cevirisi",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "alan hesapla",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "hacim hesapla",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "ort hesapla",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "matematik islem",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "karekoku ne",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "ussu ne",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "logaritma hesapla",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "2 arti 2 kac",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "100'un yuzde 15'i",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "matematik sorusu coz",
+      "intent": "calculate_math"
+    },
+    {
+      "text": "anlami ne",
+      "intent": "define_word"
+    },
+    {
+      "text": "ne demek",
+      "intent": "define_word"
+    },
+    {
+      "text": "tanimi ne",
+      "intent": "define_word"
+    },
+    {
+      "text": "ne anlama gelir",
+      "intent": "define_word"
+    },
+    {
+      "text": "manasi ne",
+      "intent": "define_word"
+    },
+    {
+      "text": "sozluk anlami",
+      "intent": "define_word"
+    },
+    {
+      "text": "kelime anlami",
+      "intent": "define_word"
+    },
+    {
+      "text": "kavram ne demek",
+      "intent": "define_word"
+    },
+    {
+      "text": "terim aciklamasi",
+      "intent": "define_word"
+    },
+    {
+      "text": "ne oldugunu acikla",
+      "intent": "define_word"
+    },
+    {
+      "text": "sozlukte ne demek",
+      "intent": "define_word"
+    },
+    {
+      "text": "farki ne",
+      "intent": "compare_things"
+    },
+    {
+      "text": "karsilastir",
+      "intent": "compare_things"
+    },
+    {
+      "text": "hangisi daha iyi",
+      "intent": "compare_things"
+    },
+    {
+      "text": "avantaj dezavantaj",
+      "intent": "compare_things"
+    },
+    {
+      "text": "aralarindaki fark",
+      "intent": "compare_things"
+    },
+    {
+      "text": "mukayese et",
+      "intent": "compare_things"
+    },
+    {
+      "text": "hangisini secmeliyim",
+      "intent": "compare_things"
+    },
+    {
+      "text": "karsilastirma yap",
+      "intent": "compare_things"
+    },
+    {
+      "text": "hangisi daha uygun",
+      "intent": "compare_things"
+    },
+    {
+      "text": "versus",
+      "intent": "compare_things"
+    },
+    {
+      "text": "artilari eksileri",
+      "intent": "compare_things"
+    },
+    {
+      "text": "ozetle",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "kisa anlat",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "ozet cikar",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "ana fikir ne",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "kisaca acikla",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "kisa versiyon",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "ozet yaz",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "metnin ozeti",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "hizli ozet",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "temel noktalar",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "onemli kisimlar",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "ozet gecir",
+      "intent": "summarize_text"
+    },
+    {
+      "text": "adimlari yaz",
+      "intent": "list_steps"
+    },
+    {
+      "text": "nasil yapilir",
+      "intent": "list_steps"
+    },
+    {
+      "text": "adim adim anlat",
+      "intent": "list_steps"
+    },
+    {
+      "text": "prosedur acikla",
+      "intent": "list_steps"
+    },
+    {
+      "text": "sureci anlat",
+      "intent": "list_steps"
+    },
+    {
+      "text": "yol haritasi",
+      "intent": "list_steps"
+    },
+    {
+      "text": "yapilacaklar listesi",
+      "intent": "list_steps"
+    },
+    {
+      "text": "islem adimlari",
+      "intent": "list_steps"
+    },
+    {
+      "text": "rehber yaz",
+      "intent": "list_steps"
+    },
+    {
+      "text": "kilavuz hazirla",
+      "intent": "list_steps"
+    },
+    {
+      "text": "howto acikla",
+      "intent": "list_steps"
+    },
+    {
+      "text": "tutorial yaz",
+      "intent": "list_steps"
+    },
+    {
+      "text": "yemek tarifi",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "nasil yapilir tarifi",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "yemek tarifleri",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "tatli tarifi",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "corba tarifi",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "pasta tarifi",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "yemek pisirir misin tarifleriyle",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "ne pisireyim",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "aksam yemegi tarifi",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "kolay yemek tarifleri",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "saglikli yemek tarifi",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "diyet tarifi",
+      "intent": "recipe_search"
+    },
+    {
+      "text": "dogru mu",
+      "intent": "fact_check"
+    },
+    {
+      "text": "gercek mi",
+      "intent": "fact_check"
+    },
+    {
+      "text": "bu bilgi dogru mu",
+      "intent": "fact_check"
+    },
+    {
+      "text": "dogrulaayabilir misin",
+      "intent": "fact_check"
+    },
+    {
+      "text": "kontrol et dogru mu",
+      "intent": "fact_check"
+    },
+    {
+      "text": "emin misin",
+      "intent": "fact_check"
+    },
+    {
+      "text": "kaynagi ne",
+      "intent": "fact_check"
+    },
+    {
+      "text": "kaniti ne",
+      "intent": "fact_check"
+    },
+    {
+      "text": "bu iddia dogru mu",
+      "intent": "fact_check"
+    },
+    {
+      "text": "dogruluk kontrolu yap",
+      "intent": "fact_check"
+    },
+    {
+      "text": "tweet at",
+      "intent": "social_post"
+    },
+    {
+      "text": "paylasim yap",
+      "intent": "social_post"
+    },
+    {
+      "text": "sosyal medyada paylas",
+      "intent": "social_post"
+    },
+    {
+      "text": "instagram'a yukle",
+      "intent": "social_post"
+    },
+    {
+      "text": "facebook'ta paylas",
+      "intent": "social_post"
+    },
+    {
+      "text": "post at",
+      "intent": "social_post"
+    },
+    {
+      "text": "story paylas",
+      "intent": "social_post"
+    },
+    {
+      "text": "durum guncelle",
+      "intent": "social_post"
+    },
+    {
+      "text": "linkedin'de paylas",
+      "intent": "social_post"
+    },
+    {
+      "text": "sosyal medya postu hazirla",
+      "intent": "social_post"
+    },
+    {
+      "text": "icerik paylas",
+      "intent": "social_post"
+    },
+    {
+      "text": "youtube'da ara",
+      "intent": "youtube_search"
+    },
+    {
+      "text": "youtube video bul",
+      "intent": "youtube_search"
+    },
+    {
+      "text": "youtube arama",
+      "intent": "youtube_search"
+    },
+    {
+      "text": "video ara",
+      "intent": "youtube_search"
+    },
+    {
+      "text": "youtube'dan bul",
+      "intent": "youtube_search"
+    },
+    {
+      "text": "youtube video arama yap",
+      "intent": "youtube_search"
+    },
+    {
+      "text": "youtube'da konu ara",
+      "intent": "youtube_search"
+    },
+    {
+      "text": "video icerik bul",
+      "intent": "youtube_search"
+    },
+    {
+      "text": "youtube kanal ara",
+      "intent": "youtube_search"
+    },
+    {
+      "text": "youtube'da izle",
+      "intent": "youtube_search"
+    },
+    {
+      "text": "youtube video ac",
+      "intent": "youtube_play"
+    },
+    {
+      "text": "video oynat",
+      "intent": "youtube_play"
+    },
+    {
+      "text": "youtube'da izle",
+      "intent": "youtube_play"
+    },
+    {
+      "text": "video baslat",
+      "intent": "youtube_play"
+    },
+    {
+      "text": "youtube izle",
+      "intent": "youtube_play"
+    },
+    {
+      "text": "video ac",
+      "intent": "youtube_play"
+    },
+    {
+      "text": "youtube'dan video oynat",
+      "intent": "youtube_play"
+    },
+    {
+      "text": "acik video oynat",
+      "intent": "youtube_play"
+    },
+    {
+      "text": "video play",
+      "intent": "youtube_play"
+    },
+    {
+      "text": "video calistir",
+      "intent": "youtube_play"
+    },
+    {
+      "text": "sesi ac",
+      "intent": "change_volume"
+    },
+    {
+      "text": "sesi kis",
+      "intent": "change_volume"
+    },
+    {
+      "text": "ses seviyesini ayarla",
+      "intent": "change_volume"
+    },
+    {
+      "text": "sesi artir",
+      "intent": "change_volume"
+    },
+    {
+      "text": "sesi azalt",
+      "intent": "change_volume"
+    },
+    {
+      "text": "volumu yukselt",
+      "intent": "change_volume"
+    },
+    {
+      "text": "sessize al",
+      "intent": "change_volume"
+    },
+    {
+      "text": "mute yap",
+      "intent": "change_volume"
+    },
+    {
+      "text": "ses ac",
+      "intent": "change_volume"
+    },
+    {
+      "text": "ses kapat",
+      "intent": "change_volume"
+    },
+    {
+      "text": "volum ayarla",
+      "intent": "change_volume"
+    },
+    {
+      "text": "ses seviyesi",
+      "intent": "change_volume"
+    },
+    {
+      "text": "hoparlor sesini artir",
+      "intent": "change_volume"
+    },
+    {
+      "text": "ses yukari",
+      "intent": "change_volume"
+    },
+    {
+      "text": "ses asagi",
+      "intent": "change_volume"
+    },
+    {
+      "text": "parlakligi artir",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "parlakligi azalt",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "ekrani karart",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "parlaklik ayarla",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "ekran parlakligi",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "isigi artir",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "isigi azalt",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "ekrani aydinlat",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "parlaklik seviyesi",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "ekran karartma",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "brightness ayarla",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "monitor parlakligi",
+      "intent": "change_brightness"
+    },
+    {
+      "text": "duvarkagidini degistir",
+      "intent": "change_wallpaper"
+    },
+    {
+      "text": "arka plani degistir",
+      "intent": "change_wallpaper"
+    },
+    {
+      "text": "masaustu resmi degistir",
+      "intent": "change_wallpaper"
+    },
+    {
+      "text": "wallpaper degistir",
+      "intent": "change_wallpaper"
+    },
+    {
+      "text": "ekran arka planini ayarla",
+      "intent": "change_wallpaper"
+    },
+    {
+      "text": "yeni arka plan koy",
+      "intent": "change_wallpaper"
+    },
+    {
+      "text": "masaustu gorseli degistir",
+      "intent": "change_wallpaper"
+    },
+    {
+      "text": "duvar kagidi ayarla",
+      "intent": "change_wallpaper"
+    },
+    {
+      "text": "ekran goruntusu al",
+      "intent": "take_screenshot"
+    },
+    {
+      "text": "screenshot al",
+      "intent": "take_screenshot"
+    },
+    {
+      "text": "ekrani kaydet",
+      "intent": "take_screenshot"
+    },
+    {
+      "text": "ekran yakalama",
+      "intent": "take_screenshot"
+    },
+    {
+      "text": "snapshoth al",
+      "intent": "take_screenshot"
+    },
+    {
+      "text": "ekran fotografi cek",
+      "intent": "take_screenshot"
+    },
+    {
+      "text": "print screen",
+      "intent": "take_screenshot"
+    },
+    {
+      "text": "ekran resmi al",
+      "intent": "take_screenshot"
+    },
+    {
+      "text": "goruntuyu yakala",
+      "intent": "take_screenshot"
+    },
+    {
+      "text": "ss al",
+      "intent": "take_screenshot"
+    },
+    {
+      "text": "ekran goruntusu kaydet",
+      "intent": "take_screenshot"
+    },
+    {
+      "text": "ekran kaydi baslat",
+      "intent": "screen_record"
+    },
+    {
+      "text": "ekrani kaydet",
+      "intent": "screen_record"
+    },
+    {
+      "text": "screen record",
+      "intent": "screen_record"
+    },
+    {
+      "text": "video kaydini baslat",
+      "intent": "screen_record"
+    },
+    {
+      "text": "ekran videosu cek",
+      "intent": "screen_record"
+    },
+    {
+      "text": "ekran kayit yap",
+      "intent": "screen_record"
+    },
+    {
+      "text": "recording baslat",
+      "intent": "screen_record"
+    },
+    {
+      "text": "ekran kaydini durdur",
+      "intent": "screen_record"
+    },
+    {
+      "text": "kaydi bitir",
+      "intent": "screen_record"
+    },
+    {
+      "text": "bilgisayari kapat",
+      "intent": "shutdown_pc"
+    },
+    {
+      "text": "sistemi kapat",
+      "intent": "shutdown_pc"
+    },
+    {
+      "text": "pc kapat",
+      "intent": "shutdown_pc"
+    },
+    {
+      "text": "bilgisayari durdur",
+      "intent": "shutdown_pc"
+    },
+    {
+      "text": "shutdown",
+      "intent": "shutdown_pc"
+    },
+    {
+      "text": "kapan",
+      "intent": "shutdown_pc"
+    },
+    {
+      "text": "bilgisayar kapansin",
+      "intent": "shutdown_pc"
+    },
+    {
+      "text": "sistemi kapat lutfen",
+      "intent": "shutdown_pc"
+    },
+    {
+      "text": "makineyi kapat",
+      "intent": "shutdown_pc"
+    },
+    {
+      "text": "pc'yi durdur",
+      "intent": "shutdown_pc"
+    },
+    {
+      "text": "yeniden baslat",
+      "intent": "restart_pc"
+    },
+    {
+      "text": "bilgisayari restart et",
+      "intent": "restart_pc"
+    },
+    {
+      "text": "sistemi yeniden baslat",
+      "intent": "restart_pc"
+    },
+    {
+      "text": "restart at",
+      "intent": "restart_pc"
+    },
+    {
+      "text": "reboot yap",
+      "intent": "restart_pc"
+    },
+    {
+      "text": "bilgisayari tekrar ac",
+      "intent": "restart_pc"
+    },
+    {
+      "text": "sistemi yenile",
+      "intent": "restart_pc"
+    },
+    {
+      "text": "yeniden baslatma",
+      "intent": "restart_pc"
+    },
+    {
+      "text": "pc restart",
+      "intent": "restart_pc"
+    },
+    {
+      "text": "ekrani kilitle",
+      "intent": "lock_screen"
+    },
+    {
+      "text": "bilgisayari kilitle",
+      "intent": "lock_screen"
+    },
+    {
+      "text": "kilitle",
+      "intent": "lock_screen"
+    },
+    {
+      "text": "ekran kilidi",
+      "intent": "lock_screen"
+    },
+    {
+      "text": "lock screen",
+      "intent": "lock_screen"
+    },
+    {
+      "text": "masaustunu kilitle",
+      "intent": "lock_screen"
+    },
+    {
+      "text": "oturumu kilitle",
+      "intent": "lock_screen"
+    },
+    {
+      "text": "guvenlik kilidi",
+      "intent": "lock_screen"
+    },
+    {
+      "text": "ekrani kapat",
+      "intent": "lock_screen"
+    },
+    {
+      "text": "uyku moduna al",
+      "intent": "sleep_mode"
+    },
+    {
+      "text": "sleep mode",
+      "intent": "sleep_mode"
+    },
+    {
+      "text": "bilgisayari uyut",
+      "intent": "sleep_mode"
+    },
+    {
+      "text": "uyku modu",
+      "intent": "sleep_mode"
+    },
+    {
+      "text": "beklet",
+      "intent": "sleep_mode"
+    },
+    {
+      "text": "standby modu",
+      "intent": "sleep_mode"
+    },
+    {
+      "text": "hazirda beklet",
+      "intent": "sleep_mode"
+    },
+    {
+      "text": "hibernate",
+      "intent": "sleep_mode"
+    },
+    {
+      "text": "uyku moduna gec",
+      "intent": "sleep_mode"
+    },
+    {
+      "text": "wifi ac",
+      "intent": "toggle_wifi"
+    },
+    {
+      "text": "wifi kapat",
+      "intent": "toggle_wifi"
+    },
+    {
+      "text": "kablosuz ag ac",
+      "intent": "toggle_wifi"
+    },
+    {
+      "text": "interneti ac",
+      "intent": "toggle_wifi"
+    },
+    {
+      "text": "wifi baglantisi",
+      "intent": "toggle_wifi"
+    },
+    {
+      "text": "wifi ayarlari",
+      "intent": "toggle_wifi"
+    },
+    {
+      "text": "wifi'yi aktif et",
+      "intent": "toggle_wifi"
+    },
+    {
+      "text": "wifi'yi devre disi birak",
+      "intent": "toggle_wifi"
+    },
+    {
+      "text": "kablosuz baglanti",
+      "intent": "toggle_wifi"
+    },
+    {
+      "text": "wifi toggle",
+      "intent": "toggle_wifi"
+    },
+    {
+      "text": "bluetooth ac",
+      "intent": "toggle_bluetooth"
+    },
+    {
+      "text": "bluetooth kapat",
+      "intent": "toggle_bluetooth"
+    },
+    {
+      "text": "bluetooth ayarlari",
+      "intent": "toggle_bluetooth"
+    },
+    {
+      "text": "bluetooth'u aktif et",
+      "intent": "toggle_bluetooth"
+    },
+    {
+      "text": "bluetooth eslesme",
+      "intent": "toggle_bluetooth"
+    },
+    {
+      "text": "bluetooth cihaz bagla",
+      "intent": "toggle_bluetooth"
+    },
+    {
+      "text": "bluetooth devre disi birak",
+      "intent": "toggle_bluetooth"
+    },
+    {
+      "text": "bluetooth Toggle",
+      "intent": "toggle_bluetooth"
+    },
+    {
+      "text": "bluetooth baglantisi",
+      "intent": "toggle_bluetooth"
+    },
+    {
+      "text": "saat kac",
+      "intent": "show_time"
+    },
+    {
+      "text": "simdi saat kac",
+      "intent": "show_time"
+    },
+    {
+      "text": "zaman ne",
+      "intent": "show_time"
+    },
+    {
+      "text": "su anki saat",
+      "intent": "show_time"
+    },
+    {
+      "text": "gunun saati",
+      "intent": "show_time"
+    },
+    {
+      "text": "saat kacti",
+      "intent": "show_time"
+    },
+    {
+      "text": "turkiye'de saat kac",
+      "intent": "show_time"
+    },
+    {
+      "text": "saati goster",
+      "intent": "show_time"
+    },
+    {
+      "text": "saat bilgisi",
+      "intent": "show_time"
+    },
+    {
+      "text": "bugun tarih ne",
+      "intent": "show_date"
+    },
+    {
+      "text": "tarih kac",
+      "intent": "show_date"
+    },
+    {
+      "text": "gunun tarihi",
+      "intent": "show_date"
+    },
+    {
+      "text": "bugun ayin kaci",
+      "intent": "show_date"
+    },
+    {
+      "text": "hangi gun",
+      "intent": "show_date"
+    },
+    {
+      "text": "bugun ne",
+      "intent": "show_date"
+    },
+    {
+      "text": "bu gun hangi gun",
+      "intent": "show_date"
+    },
+    {
+      "text": "tarih bilgisi",
+      "intent": "show_date"
+    },
+    {
+      "text": "bugunun tarihi",
+      "intent": "show_date"
+    },
+    {
+      "text": "ay ve yil",
+      "intent": "show_date"
+    },
+    {
+      "text": "takvim tarihi",
+      "intent": "show_date"
+    },
+    {
+      "text": "alarm kur",
+      "intent": "set_alarm"
+    },
+    {
+      "text": "alarmi ayarla",
+      "intent": "set_alarm"
+    },
+    {
+      "text": "sabah alarmi kur",
+      "intent": "set_alarm"
+    },
+    {
+      "text": "saat yedide alarm",
+      "intent": "set_alarm"
+    },
+    {
+      "text": "alarm olustur",
+      "intent": "set_alarm"
+    },
+    {
+      "text": "uyandirma alarmi",
+      "intent": "set_alarm"
+    },
+    {
+      "text": "gunluk alarm",
+      "intent": "set_alarm"
+    },
+    {
+      "text": "alarm ekle",
+      "intent": "set_alarm"
+    },
+    {
+      "text": "calar saat ayarla",
+      "intent": "set_alarm"
+    },
+    {
+      "text": "alarm koy",
+      "intent": "set_alarm"
+    },
+    {
+      "text": "alarmi aktif et",
+      "intent": "set_alarm"
+    },
+    {
+      "text": "hatirlatici kur",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "hatirlat",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "hatirlatma olustur",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "beni hatirlat",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "not birak",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "gorev hatirlatma",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "toplanti hatirlatici",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "ilac hatirlatma",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "randevu hatirlat",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "hatirlatici ekle",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "bana hatirlat",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "sonra hatırlat",
+      "intent": "set_reminder"
+    },
+    {
+      "text": "zamanlayici baslat",
+      "intent": "set_timer"
+    },
+    {
+      "text": "timer kur",
+      "intent": "set_timer"
+    },
+    {
+      "text": "geri sayim baslat",
+      "intent": "set_timer"
+    },
+    {
+      "text": "krondometre baslat",
+      "intent": "set_timer"
+    },
+    {
+      "text": "sure tut",
+      "intent": "set_timer"
+    },
+    {
+      "text": "zamanlayici ayarla",
+      "intent": "set_timer"
+    },
+    {
+      "text": "5 dakika sayaci",
+      "intent": "set_timer"
+    },
+    {
+      "text": "countdown baslat",
+      "intent": "set_timer"
+    },
+    {
+      "text": "sure ol",
+      "intent": "set_timer"
+    },
+    {
+      "text": "kronometre calistir",
+      "intent": "set_timer"
+    },
+    {
+      "text": "takvime etkinlik ekle",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "toplanti planla",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "randevu kaydet",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "takvim etkinligi olustur",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "takvime not ekle",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "toplanti ayarla",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "etkinlik olustur",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "takvimi guncelle",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "randevu olustur",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "is toplantisi planla",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "gorusme zamani ayarla",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "program ekle",
+      "intent": "calendar_event"
+    },
+    {
+      "text": "muzik cal",
+      "intent": "play_music"
+    },
+    {
+      "text": "sarki calistir",
+      "intent": "play_music"
+    },
+    {
+      "text": "muzik ac",
+      "intent": "play_music"
+    },
+    {
+      "text": "playlist cal",
+      "intent": "play_music"
+    },
+    {
+      "text": "sarki ac",
+      "intent": "play_music"
+    },
+    {
+      "text": "muzik oynat",
+      "intent": "play_music"
+    },
+    {
+      "text": "radyo ac",
+      "intent": "play_music"
+    },
+    {
+      "text": "sarki cal",
+      "intent": "play_music"
+    },
+    {
+      "text": "muzik play",
+      "intent": "play_music"
+    },
+    {
+      "text": "spotify'da cal",
+      "intent": "play_music"
+    },
+    {
+      "text": "muzik baslat",
+      "intent": "play_music"
+    },
+    {
+      "text": "parça cal",
+      "intent": "play_music"
+    },
+    {
+      "text": "album cal",
+      "intent": "play_music"
+    },
+    {
+      "text": "sanatciyi cal",
+      "intent": "play_music"
+    },
+    {
+      "text": "rastgele muzik cal",
+      "intent": "play_music"
+    },
+    {
+      "text": "fikra anlat",
+      "intent": "tell_joke"
+    },
+    {
+      "text": "espri yap",
+      "intent": "tell_joke"
+    },
+    {
+      "text": "guldur beni",
+      "intent": "tell_joke"
+    },
+    {
+      "text": "komik bir sey anlat",
+      "intent": "tell_joke"
+    },
+    {
+      "text": "saka yap",
+      "intent": "tell_joke"
+    },
+    {
+      "text": "bir fikra soyle",
+      "intent": "tell_joke"
+    },
+    {
+      "text": "gulumsett",
+      "intent": "tell_joke"
+    },
+    {
+      "text": "beni eglendirr",
+      "intent": "tell_joke"
+    },
+    {
+      "text": "komik ol",
+      "intent": "tell_joke"
+    },
+    {
+      "text": "mizah yap",
+      "intent": "tell_joke"
+    },
+    {
+      "text": "esprili bir sey soyle",
+      "intent": "tell_joke"
+    },
+    {
+      "text": "hikaye anlat",
+      "intent": "tell_story"
+    },
+    {
+      "text": "masal anlat",
+      "intent": "tell_story"
+    },
+    {
+      "text": "oykü anlat",
+      "intent": "tell_story"
+    },
+    {
+      "text": "bir hikaye soyle",
+      "intent": "tell_story"
+    },
+    {
+      "text": "masall anlat",
+      "intent": "tell_story"
+    },
+    {
+      "text": "kisa hikaye yaz",
+      "intent": "tell_story"
+    },
+    {
+      "text": "macera hikayesi",
+      "intent": "tell_story"
+    },
+    {
+      "text": "korku hikayesi",
+      "intent": "tell_story"
+    },
+    {
+      "text": "ask hikayesi",
+      "intent": "tell_story"
+    },
+    {
+      "text": "cocuk masali anlat",
+      "intent": "tell_story"
+    },
+    {
+      "text": "uyku masali",
+      "intent": "tell_story"
+    },
+    {
+      "text": "ilginc bilgi ver",
+      "intent": "random_fact"
+    },
+    {
+      "text": "biliyor muydun",
+      "intent": "random_fact"
+    },
+    {
+      "text": "enteresan bilgi",
+      "intent": "random_fact"
+    },
+    {
+      "text": "sasirtici bilgi",
+      "intent": "random_fact"
+    },
+    {
+      "text": "gunun bilgisi",
+      "intent": "random_fact"
+    },
+    {
+      "text": "fun fact",
+      "intent": "random_fact"
+    },
+    {
+      "text": "ilginc bir sey soyle",
+      "intent": "random_fact"
+    },
+    {
+      "text": "egitici bilgi",
+      "intent": "random_fact"
+    },
+    {
+      "text": "merak bilgisi",
+      "intent": "random_fact"
+    },
+    {
+      "text": "ansiklopedik bilgi",
+      "intent": "random_fact"
+    },
+    {
+      "text": "bilgi kapsulu",
+      "intent": "random_fact"
+    },
+    {
+      "text": "oyun oynayalim",
+      "intent": "play_game"
+    },
+    {
+      "text": "kelime oyunu",
+      "intent": "play_game"
+    },
+    {
+      "text": "bilmece sor",
+      "intent": "play_game"
+    },
+    {
+      "text": "zeka sorusu sor",
+      "intent": "play_game"
+    },
+    {
+      "text": "bulmaca",
+      "intent": "play_game"
+    },
+    {
+      "text": "quiz yap",
+      "intent": "play_game"
+    },
+    {
+      "text": "oyun baslat",
+      "intent": "play_game"
+    },
+    {
+      "text": "oynamak istiyorum",
+      "intent": "play_game"
+    },
+    {
+      "text": "bir oyun oher",
+      "intent": "play_game"
+    },
+    {
+      "text": "tahmimn oyunu",
+      "intent": "play_game"
+    },
+    {
+      "text": "sayi tahmin",
+      "intent": "play_game"
+    },
+    {
+      "text": "trivias sor",
+      "intent": "play_game"
+    },
+    {
+      "text": "doviz kuru",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "dolar kac tl",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "euro ne kadar",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "kur cevirisi",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "dolar tl cevir",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "doviz hesapla",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "sterlin kac lira",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "kur bilgisi",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "dolar euro paritesi",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "kripto fiyatlari",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "bitcoin kac dolar",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "altin fiyati",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "guncel kur",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "doviz cevir",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "para birimi cevir",
+      "intent": "currency_convert"
+    },
+    {
+      "text": "butce takibi",
+      "intent": "budget_track"
+    },
+    {
+      "text": "harcama kaydet",
+      "intent": "budget_track"
+    },
+    {
+      "text": "gelir gider takibi",
+      "intent": "budget_track"
+    },
+    {
+      "text": "butce plani yap",
+      "intent": "budget_track"
+    },
+    {
+      "text": "harcamalari listele",
+      "intent": "budget_track"
+    },
+    {
+      "text": "butce durumu",
+      "intent": "budget_track"
+    },
+    {
+      "text": "para yonetimi",
+      "intent": "budget_track"
+    },
+    {
+      "text": "tasarruf plani",
+      "intent": "budget_track"
+    },
+    {
+      "text": "mali durum",
+      "intent": "budget_track"
+    },
+    {
+      "text": "butce raporu",
+      "intent": "budget_track"
+    },
+    {
+      "text": "aylik harcamalar",
+      "intent": "budget_track"
+    },
+    {
+      "text": "gelir tablosu",
+      "intent": "budget_track"
+    },
+    {
+      "text": "fiyat karsilastir",
+      "intent": "price_compare"
+    },
+    {
+      "text": "en ucuz fiyat",
+      "intent": "price_compare"
+    },
+    {
+      "text": "fiyat kontrolu",
+      "intent": "price_compare"
+    },
+    {
+      "text": "fiyat arastirmasi",
+      "intent": "price_compare"
+    },
+    {
+      "text": "uygun fiyat bul",
+      "intent": "price_compare"
+    },
+    {
+      "text": "fiyatlari karsilastir",
+      "intent": "price_compare"
+    },
+    {
+      "text": "en iyi fiyat",
+      "intent": "price_compare"
+    },
+    {
+      "text": "ucuz alternatif bul",
+      "intent": "price_compare"
+    },
+    {
+      "text": "fiyat analizi",
+      "intent": "price_compare"
+    },
+    {
+      "text": "saglikli yasam ipuclari",
+      "intent": "health_tip"
+    },
+    {
+      "text": "saglik tavsiyesi",
+      "intent": "health_tip"
+    },
+    {
+      "text": "saglikli beslenme",
+      "intent": "health_tip"
+    },
+    {
+      "text": "saglik onerisi",
+      "intent": "health_tip"
+    },
+    {
+      "text": "saglik bilgisi",
+      "intent": "health_tip"
+    },
+    {
+      "text": "saglikli olabilmek icin ne yapmaliyim",
+      "intent": "health_tip"
+    },
+    {
+      "text": "saglik rehberi",
+      "intent": "health_tip"
+    },
+    {
+      "text": "saglik kontrolu",
+      "intent": "health_tip"
+    },
+    {
+      "text": "saglik ipucu",
+      "intent": "health_tip"
+    },
+    {
+      "text": "yasam kalitesi",
+      "intent": "health_tip"
+    },
+    {
+      "text": "egzersiz oner",
+      "intent": "exercise_suggest"
+    },
+    {
+      "text": "spor hareketi goster",
+      "intent": "exercise_suggest"
+    },
+    {
+      "text": "antrenman programi",
+      "intent": "exercise_suggest"
+    },
+    {
+      "text": "ev egzersizi",
+      "intent": "exercise_suggest"
+    },
+    {
+      "text": "kardiyo onerileri",
+      "intent": "exercise_suggest"
+    },
+    {
+      "text": "kas gelistirme",
+      "intent": "exercise_suggest"
+    },
+    {
+      "text": "esneme hareketleri",
+      "intent": "exercise_suggest"
+    },
+    {
+      "text": "yoga hareketleri",
+      "intent": "exercise_suggest"
+    },
+    {
+      "text": "fitness program",
+      "intent": "exercise_suggest"
+    },
+    {
+      "text": "kilo verme egzersizi",
+      "intent": "exercise_suggest"
+    },
+    {
+      "text": "gunluk egzersiz",
+      "intent": "exercise_suggest"
+    },
+    {
+      "text": "kalori hesapla",
+      "intent": "calorie_info"
+    },
+    {
+      "text": "besin degeri",
+      "intent": "calorie_info"
+    },
+    {
+      "text": "kalori bilgisi",
+      "intent": "calorie_info"
+    },
+    {
+      "text": "yemek kalorisi",
+      "intent": "calorie_info"
+    },
+    {
+      "text": "diyet kalori hesabi",
+      "intent": "calorie_info"
+    },
+    {
+      "text": "gunluk kalori ihtiyaci",
+      "intent": "calorie_info"
+    },
+    {
+      "text": "kalori cetveli",
+      "intent": "calorie_info"
+    },
+    {
+      "text": "kalori sayaci",
+      "intent": "calorie_info"
+    },
+    {
+      "text": "obezite hesapla",
+      "intent": "calorie_info"
+    },
+    {
+      "text": "vucut kitle indeksi",
+      "intent": "calorie_info"
+    },
+    {
+      "text": "bmi hesapla",
+      "intent": "calorie_info"
+    },
+    {
+      "text": "su ic hatirlatici",
+      "intent": "water_reminder"
+    },
+    {
+      "text": "su icmeyi hatirlat",
+      "intent": "water_reminder"
+    },
+    {
+      "text": "su zamani",
+      "intent": "water_reminder"
+    },
+    {
+      "text": "su icme hatirlatmasi",
+      "intent": "water_reminder"
+    },
+    {
+      "text": "gunluk su tuketimi",
+      "intent": "water_reminder"
+    },
+    {
+      "text": "ne kadar su icmeliyim",
+      "intent": "water_reminder"
+    },
+    {
+      "text": "su takibi",
+      "intent": "water_reminder"
+    },
+    {
+      "text": "hidrasyon hatirlatici",
+      "intent": "water_reminder"
+    },
+    {
+      "text": "yakin yer bul",
+      "intent": "find_place"
+    },
+    {
+      "text": "restoran bul",
+      "intent": "find_place"
+    },
+    {
+      "text": "kafe bul",
+      "intent": "find_place"
+    },
+    {
+      "text": "eczane nerede",
+      "intent": "find_place"
+    },
+    {
+      "text": "hastane bul",
+      "intent": "find_place"
+    },
+    {
+      "text": "market bul",
+      "intent": "find_place"
+    },
+    {
+      "text": "en yakin benzinlik",
+      "intent": "find_place"
+    },
+    {
+      "text": "park yeri bul",
+      "intent": "find_place"
+    },
+    {
+      "text": "otel bul",
+      "intent": "find_place"
+    },
+    {
+      "text": "atm nerede",
+      "intent": "find_place"
+    },
+    {
+      "text": "yakin yerleri goster",
+      "intent": "find_place"
+    },
+    {
+      "text": "mekan onerileri",
+      "intent": "find_place"
+    },
+    {
+      "text": "yol tarifi al",
+      "intent": "get_directions"
+    },
+    {
+      "text": "navigasyon baslat",
+      "intent": "get_directions"
+    },
+    {
+      "text": "nasil gidilir",
+      "intent": "get_directions"
+    },
+    {
+      "text": "yol tarifi goster",
+      "intent": "get_directions"
+    },
+    {
+      "text": "rota olustur",
+      "intent": "get_directions"
+    },
+    {
+      "text": "trafiği goster",
+      "intent": "get_directions"
+    },
+    {
+      "text": "en kisa yol",
+      "intent": "get_directions"
+    },
+    {
+      "text": "ulasim bilgisi",
+      "intent": "get_directions"
+    },
+    {
+      "text": "yol haritasi",
+      "intent": "get_directions"
+    },
+    {
+      "text": "araba ile nasil gidilir",
+      "intent": "get_directions"
+    },
+    {
+      "text": "toplu tasima rotasi",
+      "intent": "get_directions"
+    },
+    {
+      "text": "seyahat planla",
+      "intent": "travel_plan"
+    },
+    {
+      "text": "tatil planı yap",
+      "intent": "travel_plan"
+    },
+    {
+      "text": "gezi programi olustur",
+      "intent": "travel_plan"
+    },
+    {
+      "text": "ucak bileti bul",
+      "intent": "travel_plan"
+    },
+    {
+      "text": "otel onerileri",
+      "intent": "travel_plan"
+    },
+    {
+      "text": "seyahat liustesi hazirla",
+      "intent": "travel_plan"
+    },
+    {
+      "text": "vize bilgisi",
+      "intent": "travel_plan"
+    },
+    {
+      "text": "pasaport islemleri",
+      "intent": "travel_plan"
+    },
+    {
+      "text": "seyahat onerileri",
+      "intent": "travel_plan"
+    },
+    {
+      "text": "hafta sonu gezi",
+      "intent": "travel_plan"
+    },
+    {
+      "text": "yurt disi seyahat plani",
+      "intent": "travel_plan"
+    },
+    {
+      "text": "kodu acikla",
+      "intent": "explain_code"
+    },
+    {
+      "text": "bu kod ne yapar",
+      "intent": "explain_code"
+    },
+    {
+      "text": "kod analizi",
+      "intent": "explain_code"
+    },
+    {
+      "text": "script aciklama",
+      "intent": "explain_code"
+    },
+    {
+      "text": "program ne ise yarar",
+      "intent": "explain_code"
+    },
+    {
+      "text": "fonksiyon acikla",
+      "intent": "explain_code"
+    },
+    {
+      "text": "algoritma acikla",
+      "intent": "explain_code"
+    },
+    {
+      "text": "kodu anlat",
+      "intent": "explain_code"
+    },
+    {
+      "text": "syntax aciklama",
+      "intent": "explain_code"
+    },
+    {
+      "text": "hata mesaji ne anlama geliyor",
+      "intent": "explain_code"
+    },
+    {
+      "text": "error acikla",
+      "intent": "explain_code"
+    },
+    {
+      "text": "kod yaz",
+      "intent": "write_code"
+    },
+    {
+      "text": "script olustur",
+      "intent": "write_code"
+    },
+    {
+      "text": "program yaz",
+      "intent": "write_code"
+    },
+    {
+      "text": "fonksiyon yaz",
+      "intent": "write_code"
+    },
+    {
+      "text": "python kodu yaz",
+      "intent": "write_code"
+    },
+    {
+      "text": "javascript kodu",
+      "intent": "write_code"
+    },
+    {
+      "text": "script hazirla",
+      "intent": "write_code"
+    },
+    {
+      "text": "otomasyon kodu yaz",
+      "intent": "write_code"
+    },
+    {
+      "text": "bot yaz",
+      "intent": "write_code"
+    },
+    {
+      "text": "api kodu olustur",
+      "intent": "write_code"
+    },
+    {
+      "text": "veritabani sorgusu yaz",
+      "intent": "write_code"
+    },
+    {
+      "text": "hata duzelt",
+      "intent": "debug_help"
+    },
+    {
+      "text": "bug bul",
+      "intent": "debug_help"
+    },
+    {
+      "text": "debug yap",
+      "intent": "debug_help"
+    },
+    {
+      "text": "kod hatasi nedir",
+      "intent": "debug_help"
+    },
+    {
+      "text": "neden calismıyor",
+      "intent": "debug_help"
+    },
+    {
+      "text": "hata coz",
+      "intent": "debug_help"
+    },
+    {
+      "text": "sorun gider",
+      "intent": "debug_help"
+    },
+    {
+      "text": "cozum oner",
+      "intent": "debug_help"
+    },
+    {
+      "text": "error fix",
+      "intent": "debug_help"
+    },
+    {
+      "text": "kod duzeltme",
+      "intent": "debug_help"
+    },
+    {
+      "text": "debugging yardimi",
+      "intent": "debug_help"
+    },
+    {
+      "text": "virus taramasi yap",
+      "intent": "virus_scan"
+    },
+    {
+      "text": "guvenlik taramasi",
+      "intent": "virus_scan"
+    },
+    {
+      "text": "malware kontrol",
+      "intent": "virus_scan"
+    },
+    {
+      "text": "antiviurs tarama",
+      "intent": "virus_scan"
+    },
+    {
+      "text": "bilgisayari tara",
+      "intent": "virus_scan"
+    },
+    {
+      "text": "tehdit taramasi",
+      "intent": "virus_scan"
+    },
+    {
+      "text": "guvenlik kontrolu",
+      "intent": "virus_scan"
+    },
+    {
+      "text": "zararli yazilim tara",
+      "intent": "virus_scan"
+    },
+    {
+      "text": "virus kontrol",
+      "intent": "virus_scan"
+    },
+    {
+      "text": "sifre olustur",
+      "intent": "password_generate"
+    },
+    {
+      "text": "guclu parola uret",
+      "intent": "password_generate"
+    },
+    {
+      "text": "rastgele sifre",
+      "intent": "password_generate"
+    },
+    {
+      "text": "guvenli parola yap",
+      "intent": "password_generate"
+    },
+    {
+      "text": "sifre onerisi",
+      "intent": "password_generate"
+    },
+    {
+      "text": "password generate",
+      "intent": "password_generate"
+    },
+    {
+      "text": "yeni sifre olustur",
+      "intent": "password_generate"
+    },
+    {
+      "text": "sifre yap",
+      "intent": "password_generate"
+    },
+    {
+      "text": "karmasik sifre uret",
+      "intent": "password_generate"
+    },
+    {
+      "text": "gizlilik kontrolu",
+      "intent": "privacy_check"
+    },
+    {
+      "text": "izleme kontrol",
+      "intent": "privacy_check"
+    },
+    {
+      "text": "kisisel veri guvenligi",
+      "intent": "privacy_check"
+    },
+    {
+      "text": "gizlilik ayarlari",
+      "intent": "privacy_check"
+    },
+    {
+      "text": "privacy check",
+      "intent": "privacy_check"
+    },
+    {
+      "text": "takip engelle",
+      "intent": "privacy_check"
+    },
+    {
+      "text": "cerezleri temizle",
+      "intent": "privacy_check"
+    },
+    {
+      "text": "iz birakma modu",
+      "intent": "privacy_check"
+    },
+    {
+      "text": "incognito mod",
+      "intent": "privacy_check"
+    },
+    {
+      "text": "merhaba",
+      "intent": "greeting"
+    },
+    {
+      "text": "selam",
+      "intent": "greeting"
+    },
+    {
+      "text": "gunaydin",
+      "intent": "greeting"
+    },
+    {
+      "text": "iyi gunler",
+      "intent": "greeting"
+    },
+    {
+      "text": "iyi aksamlar",
+      "intent": "greeting"
+    },
+    {
+      "text": "iyi geceler",
+      "intent": "greeting"
+    },
+    {
+      "text": "nasilsin",
+      "intent": "greeting"
+    },
+    {
+      "text": "naber",
+      "intent": "greeting"
+    },
+    {
+      "text": "hey",
+      "intent": "greeting"
+    },
+    {
+      "text": "sa",
+      "intent": "greeting"
+    },
+    {
+      "text": "selamun aleykum",
+      "intent": "greeting"
+    },
+    {
+      "text": "hosgeldin",
+      "intent": "greeting"
+    },
+    {
+      "text": "merhabalar",
+      "intent": "greeting"
+    },
+    {
+      "text": "selamlar",
+      "intent": "greeting"
+    },
+    {
+      "text": "gunaydinn",
+      "intent": "greeting"
+    },
+    {
+      "text": "iyi sabahlar",
+      "intent": "greeting"
+    },
+    {
+      "text": "hayirli gunler",
+      "intent": "greeting"
+    },
+    {
+      "text": "herkese merhaba",
+      "intent": "greeting"
+    },
+    {
+      "text": "hosgeldiniz",
+      "intent": "greeting"
+    },
+    {
+      "text": "esenlikler",
+      "intent": "greeting"
+    },
+    {
+      "text": "gorusuruz",
+      "intent": "farewell"
+    },
+    {
+      "text": "hosca kal",
+      "intent": "farewell"
+    },
+    {
+      "text": "bye",
+      "intent": "farewell"
+    },
+    {
+      "text": "gule gule",
+      "intent": "farewell"
+    },
+    {
+      "text": "iyi gunler",
+      "intent": "farewell"
+    },
+    {
+      "text": "iyi geceler",
+      "intent": "farewell"
+    },
+    {
+      "text": "kendine iyi bak",
+      "intent": "farewell"
+    },
+    {
+      "text": "gorusuruz tekrar",
+      "intent": "farewell"
+    },
+    {
+      "text": "bay bay",
+      "intent": "farewell"
+    },
+    {
+      "text": "hoscakal",
+      "intent": "farewell"
+    },
+    {
+      "text": "elveda",
+      "intent": "farewell"
+    },
+    {
+      "text": "sonra gorusuruz",
+      "intent": "farewell"
+    },
+    {
+      "text": "yarin gorusuruz",
+      "intent": "farewell"
+    },
+    {
+      "text": "hayirli geceler",
+      "intent": "farewell"
+    },
+    {
+      "text": "iyi aksamlar",
+      "intent": "farewell"
+    },
+    {
+      "text": "gorusmek uzere",
+      "intent": "farewell"
+    },
+    {
+      "text": "tesekkurler",
+      "intent": "thanks"
+    },
+    {
+      "text": "sagol",
+      "intent": "thanks"
+    },
+    {
+      "text": "tesekkur ederim",
+      "intent": "thanks"
+    },
+    {
+      "text": "cok tesekkurler",
+      "intent": "thanks"
+    },
+    {
+      "text": "ellerin dert gormesin",
+      "intent": "thanks"
+    },
+    {
+      "text": "eyv",
+      "intent": "thanks"
+    },
+    {
+      "text": "sagolasin",
+      "intent": "thanks"
+    },
+    {
+      "text": "minnattarim",
+      "intent": "thanks"
+    },
+    {
+      "text": "cok iyisin",
+      "intent": "thanks"
+    },
+    {
+      "text": "harika tesekkurler",
+      "intent": "thanks"
+    },
+    {
+      "text": "supersin sagol",
+      "intent": "thanks"
+    },
+    {
+      "text": "adamsın",
+      "intent": "thanks"
+    },
+    {
+      "text": "eline saglik",
+      "intent": "thanks"
+    },
+    {
+      "text": "gozune saglik",
+      "intent": "thanks"
+    },
+    {
+      "text": "tesekkur",
+      "intent": "thanks"
+    },
+    {
+      "text": "sen kimsin",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "adin ne",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "ne yapabilirsin",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "kendini tanit",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "sen ne tur bir yapay zekasin",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "kimsin sen",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "sen bir bot musun",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "ne isi yapiyorsun",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "ne isine yariyorsun",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "seninle ne yapabilirim",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "yeteneklerin ne",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "gorevlerin ne",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "nasil bir asistansin",
+      "intent": "who_are_you"
+    },
+    {
+      "text": "nasilsin",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "nasil gidiyor",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "iyi misin",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "keyfin nasil",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "ne haber",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "nasil hissediyorsun",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "durumun nasil",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "iyi mi gidiyor",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "hayat nasil",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "her sey yolunda mi",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "nasil gidiyorsun",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "ne var ne yok",
+      "intent": "how_are_you"
+    },
+    {
+      "text": "harika is cikardin",
+      "intent": "compliment"
+    },
+    {
+      "text": "cok iyisin",
+      "intent": "compliment"
+    },
+    {
+      "text": "mukemmelsin",
+      "intent": "compliment"
+    },
+    {
+      "text": "bravo sana",
+      "intent": "compliment"
+    },
+    {
+      "text": "aferin",
+      "intent": "compliment"
+    },
+    {
+      "text": "super yaptin",
+      "intent": "compliment"
+    },
+    {
+      "text": "muhtesemsin",
+      "intent": "compliment"
+    },
+    {
+      "text": "cok yardimci oldun",
+      "intent": "compliment"
+    },
+    {
+      "text": "seni seviyorum",
+      "intent": "compliment"
+    },
+    {
+      "text": "harika bir asistansin",
+      "intent": "compliment"
+    },
+    {
+      "text": "olaganustu",
+      "intent": "compliment"
+    },
+    {
+      "text": "enfessin",
+      "intent": "compliment"
+    },
+    {
+      "text": "sohbet edelim",
+      "intent": "small_talk"
+    },
+    {
+      "text": "konusalim",
+      "intent": "small_talk"
+    },
+    {
+      "text": "bana bir sey anlat",
+      "intent": "small_talk"
+    },
+    {
+      "text": "can sikintisi",
+      "intent": "small_talk"
+    },
+    {
+      "text": "sikiliyorum",
+      "intent": "small_talk"
+    },
+    {
+      "text": "bir seyler soyle",
+      "intent": "small_talk"
+    },
+    {
+      "text": "muhabbet edelim",
+      "intent": "small_talk"
+    },
+    {
+      "text": "ilginc bir sey bilir misin",
+      "intent": "small_talk"
+    },
+    {
+      "text": "beni eglendirr",
+      "intent": "small_talk"
+    },
+    {
+      "text": "ne konusalim",
+      "intent": "small_talk"
+    },
+    {
+      "text": "ilginc bir bilgi ver",
+      "intent": "small_talk"
+    },
+    {
+      "text": "yardim",
+      "intent": "help"
+    },
+    {
+      "text": "yardim et",
+      "intent": "help"
+    },
+    {
+      "text": "ne yapabilirsin",
+      "intent": "help"
+    },
+    {
+      "text": "komutlar neler",
+      "intent": "help"
+    },
+    {
+      "text": "nasil kullanilir",
+      "intent": "help"
+    },
+    {
+      "text": "help",
+      "intent": "help"
+    },
+    {
+      "text": "menu goster",
+      "intent": "help"
+    },
+    {
+      "text": "komut listesi",
+      "intent": "help"
+    },
+    {
+      "text": "destek",
+      "intent": "help"
+    },
+    {
+      "text": "yardim menusü",
+      "intent": "help"
+    },
+    {
+      "text": "rehber",
+      "intent": "help"
+    },
+    {
+      "text": "kilavuz",
+      "intent": "help"
+    },
+    {
+      "text": "bana yol goster",
+      "intent": "help"
+    },
+    {
+      "text": "nasil kullanayim",
+      "intent": "help"
+    },
+    {
+      "text": "n yapabilirim seninle",
+      "intent": "help"
+    },
+    {
+      "text": "bir sorum var",
+      "intent": "general_question"
+    },
+    {
+      "text": "merak ettim",
+      "intent": "general_question"
+    },
+    {
+      "text": "sormak istiyorum",
+      "intent": "general_question"
+    },
+    {
+      "text": "bilgi almak istiyorum",
+      "intent": "general_question"
+    },
+    {
+      "text": "aciklar misin",
+      "intent": "general_question"
+    },
+    {
+      "text": "ogrenebilir miyim",
+      "intent": "general_question"
+    },
+    {
+      "text": "cevap ver",
+      "intent": "general_question"
+    },
+    {
+      "text": "soru sormak istiyorum",
+      "intent": "general_question"
+    },
+    {
+      "text": "fikir almak istiyorum",
+      "intent": "general_question"
+    },
+    {
+      "text": "senin gorusun ne",
+      "intent": "general_question"
+    },
+    {
+      "text": "dusuncen nedir",
+      "intent": "general_question"
+    },
+    {
+      "text": "ne dersin",
+      "intent": "general_question"
+    },
+    {
+      "text": "not al",
+      "intent": "note_take"
+    },
+    {
+      "text": "not yaz",
+      "intent": "note_take"
+    },
+    {
+      "text": "kaydet sunu",
+      "intent": "note_take"
+    },
+    {
+      "text": "not defterine yaz",
+      "intent": "note_take"
+    },
+    {
+      "text": "onemli not",
+      "intent": "note_take"
+    },
+    {
+      "text": "hatirlatma notu al",
+      "intent": "note_take"
+    },
+    {
+      "text": "kisa not yaz",
+      "intent": "note_take"
+    },
+    {
+      "text": "bilgi kaydet",
+      "intent": "note_take"
+    },
+    {
+      "text": "not olustur",
+      "intent": "note_take"
+    },
+    {
+      "text": "memo yaz",
+      "intent": "note_take"
+    },
+    {
+      "text": "hatirlama notu",
+      "intent": "note_take"
+    },
+    {
+      "text": "aklima gelen notu kaydet",
+      "intent": "note_take"
+    },
+    {
+      "text": "yapilacaklara ekle",
+      "intent": "todo_add"
+    },
+    {
+      "text": "gorev ekle",
+      "intent": "todo_add"
+    },
+    {
+      "text": "todo ekle",
+      "intent": "todo_add"
+    },
+    {
+      "text": "listeye ekle",
+      "intent": "todo_add"
+    },
+    {
+      "text": "yapilacak is ekle",
+      "intent": "todo_add"
+    },
+    {
+      "text": "gorev olustur",
+      "intent": "todo_add"
+    },
+    {
+      "text": "is listesine ekle",
+      "intent": "todo_add"
+    },
+    {
+      "text": "plan ekle",
+      "intent": "todo_add"
+    },
+    {
+      "text": "gorev kaydet",
+      "intent": "todo_add"
+    },
+    {
+      "text": "yapilacaklar listesi",
+      "intent": "todo_list"
+    },
+    {
+      "text": "gorevlerimi goster",
+      "intent": "todo_list"
+    },
+    {
+      "text": "todo list",
+      "intent": "todo_list"
+    },
+    {
+      "text": "is listesi",
+      "intent": "todo_list"
+    },
+    {
+      "text": "planlanin gorevi",
+      "intent": "todo_list"
+    },
+    {
+      "text": "bugunku gorevler",
+      "intent": "todo_list"
+    },
+    {
+      "text": "bekleyen isler",
+      "intent": "todo_list"
+    },
+    {
+      "text": "tamamlanmamis gorevler",
+      "intent": "todo_list"
+    },
+    {
+      "text": "acik gorevler",
+      "intent": "todo_list"
+    },
+    {
+      "text": "pomodoro baslat",
+      "intent": "pomodoro_start"
+    },
+    {
+      "text": "odaklanma zamanlayicisi",
+      "intent": "pomodoro_start"
+    },
+    {
+      "text": "calisma zamanlayicisi",
+      "intent": "pomodoro_start"
+    },
+    {
+      "text": "25 dakika calisma modu",
+      "intent": "pomodoro_start"
+    },
+    {
+      "text": "pomodoro tekniki",
+      "intent": "pomodoro_start"
+    },
+    {
+      "text": "odaklanma modu",
+      "intent": "pomodoro_start"
+    },
+    {
+      "text": "konsantrasyon zamanlayicisi",
+      "intent": "pomodoro_start"
+    },
+    {
+      "text": "calisma suresi baslat",
+      "intent": "pomodoro_start"
+    },
+    {
+      "text": "fokus mod",
+      "intent": "pomodoro_start"
+    },
+    {
+      "text": "rahatsiz etme modu",
+      "intent": "focus_mode"
+    },
+    {
+      "text": "sessiz mod",
+      "intent": "focus_mode"
+    },
+    {
+      "text": "odaklanma modu",
+      "intent": "focus_mode"
+    },
+    {
+      "text": "bildirimleri kapat",
+      "intent": "focus_mode"
+    },
+    {
+      "text": "do not disturb",
+      "intent": "focus_mode"
+    },
+    {
+      "text": "dikkat dagitmadan",
+      "intent": "focus_mode"
+    },
+    {
+      "text": "odak modu ac",
+      "intent": "focus_mode"
+    },
+    {
+      "text": "konsantrasyon modu",
+      "intent": "focus_mode"
+    },
+    {
+      "text": "sessizlik modu",
+      "intent": "focus_mode"
+    },
+    {
+      "text": "bildirim engelle",
+      "intent": "focus_mode"
+    },
+    {
+      "text": "rahatsiz etme",
+      "intent": "focus_mode"
+    },
+    {
+      "text": "panoya kopyala",
+      "intent": "clipboard_manage"
+    },
+    {
+      "text": "panoyu goster",
+      "intent": "clipboard_manage"
+    },
+    {
+      "text": "pano gecmisi",
+      "intent": "clipboard_manage"
+    },
+    {
+      "text": "son kopyalananlar",
+      "intent": "clipboard_manage"
+    },
+    {
+      "text": "clipboard temizle",
+      "intent": "clipboard_manage"
+    },
+    {
+      "text": "pano yonetimi",
+      "intent": "clipboard_manage"
+    },
+    {
+      "text": "kopyalananlar listesi",
+      "intent": "clipboard_manage"
+    },
+    {
+      "text": "yapistirma gecmisi",
+      "intent": "clipboard_manage"
+    },
+    {
+      "text": "donanim bilgisi",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "bios bilgisi",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "anakart bilgisi",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "ekran karti bilgisi",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "gpu bilgisi",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "ses karti bilgisi",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "usb cihazlari",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "bagli cihazlar",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "surucu bilgileri",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "windows surumu",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "isletim sistemi bilgisi",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "sistem ozellikleri",
+      "intent": "system_info_detailed"
+    },
+    {
+      "text": "toplanti planla",
+      "intent": "schedule_meeting"
+    },
+    {
+      "text": "gorusme ayarla",
+      "intent": "schedule_meeting"
+    },
+    {
+      "text": "meeting olustur",
+      "intent": "schedule_meeting"
+    },
+    {
+      "text": "zoom toplanti kur",
+      "intent": "schedule_meeting"
+    },
+    {
+      "text": "teams toplanti",
+      "intent": "schedule_meeting"
+    },
+    {
+      "text": "online gorusme planla",
+      "intent": "schedule_meeting"
+    },
+    {
+      "text": "video konferans ayarla",
+      "intent": "schedule_meeting"
+    },
+    {
+      "text": "toplanti zamani belirle",
+      "intent": "schedule_meeting"
+    },
+    {
+      "text": "toplanti davetiyesi gonder",
+      "intent": "schedule_meeting"
+    },
+    {
+      "text": "toplanti organize et",
+      "intent": "schedule_meeting"
+    },
+    {
+      "text": "birim cevir",
+      "intent": "convert_unit"
+    },
+    {
+      "text": "kilogram pound cevir",
+      "intent": "convert_unit"
+    },
+    {
+      "text": "metre feet cevir",
+      "intent": "convert_unit"
+    },
+    {
+      "text": "celsius fahrenheit cevir",
+      "intent": "convert_unit"
+    },
+    {
+      "text": "litre galon cevir",
+      "intent": "convert_unit"
+    },
+    {
+      "text": "km mile cevir",
+      "intent": "convert_unit"
+    },
+    {
+      "text": "gram ons cevir",
+      "intent": "convert_unit"
+    },
+    {
+      "text": "birim donusturme",
+      "intent": "convert_unit"
+    },
+    {
+      "text": "santimetre inc cevir",
+      "intent": "convert_unit"
+    },
+    {
+      "text": "agirlik cevirisi",
+      "intent": "convert_unit"
+    }
+  ]
+}
