@@ -1,4 +1,47 @@
+# ── Python ──────────────────────────────────────────
 venv/
 env/
+.venv/
 __pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# ── Build / paketleme çıktıları (kaynak değil, otomatik üretilir) ──
 build/
+dist/
+output/
+
+# ── Installer / arşiv çıktıları ──────────────────────
+*.exe
+*.zip
+
+# ── Windows kısayolları ──────────────────────────────
+*.lnk
+
+# ── Build & derleme logları ──────────────────────────
+*.log
+build_log.txt
+
+# ── Çalışma zamanı verisi (uygulama tarafından üretilir, kişisel olabilir) ──
+*.db
+*.sqlite
+*.sqlite3
+data/memory/
+
+# ── Yerel test / geçici scratch dosyaları ────────────
+_hoca_*.py
+_test_*.py
+_test_*.js
+
+# ── İç içe yinelenen kopya (yanlışlıkla eklenmiş) ────
+blue_ai/BLUE_AI/
+
+# ── Editör / IDE ─────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
